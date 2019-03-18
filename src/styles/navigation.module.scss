@@ -1,0 +1,45 @@
+@import "variables";
+
+.navigation {
+  // position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .socials-container {
+    padding: 20px 40px 40px 0;
+
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // width: 0;
+    // margin-right: -100px;
+
+    .link-item {
+      flex: 1 0 100px;
+
+      &:first-child {
+        flex-basis: 124px;
+      }
+      // width: 0px;
+    }
+
+    .link {
+      float: left;
+      transform: rotate(90deg) translateY(-70px);
+      transform-origin: left top 0;
+      color: $charcoal;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

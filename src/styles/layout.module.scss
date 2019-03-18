@@ -4,6 +4,12 @@
   height: 100vh;
 }
 
+.navigation {
+  position: absolute;
+  right: 0px;
+  height: calc(100% - 102px);
+}
+
 .content {
   flex: 1 0 auto;
 }

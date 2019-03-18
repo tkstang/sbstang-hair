@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
+import Navigation from "components/navigation"
 import Footer from "components/footer"
-import styles from "styles/layout.module.scss";
+import styles from "styles/layout.module.scss"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,6 +27,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <div className={styles.layoutContainer}>
+          <div className={styles.navigation}>
+            <Navigation />
+          </div>
           <main className={styles.content}>{children}</main>
           <div className={styles.footer}>
             <Footer />
