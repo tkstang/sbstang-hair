@@ -1,0 +1,37 @@
+@import "variables";
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-basis: 40%;
+  font-size: 18px;
+  padding-top: 8px;
+
+  a {
+    margin: 0 0;
+  }
+
+  &.dark {
+    background-color: $charcoal;
+
+    .icon {
+      color: $white;
+    }
+  }
+
+  &.light {
+    background-color: $white;
+
+    .icon {
+      color: $charcoal;
+    }
+  }
+
+  .facebook {
+    margin-right: 30px;
+  }
+
+  .instagram {
+  }
+}
