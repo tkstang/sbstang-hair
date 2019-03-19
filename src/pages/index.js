@@ -11,6 +11,7 @@ import Layout from "components/layout"
 import SEO from "components/seo"
 import ImageCarousel from "components/image-carousel"
 import HeroContent from "components/hero-content"
+import Testimonials from "components/testimonials"
 import Button from "components/button"
 import { graphql } from 'gatsby'
 import { FaInstagram } from "react-icons/fa"
@@ -39,8 +40,10 @@ const IndexPage = ({ data }) => {
         />
       </div>
       <div className={styles.contentContainer}>
+        <div className={styles.testimonialSection}>
+          <Testimonials />
+        </div>
         <div className={styles.followSection}>
-          {console.log(instaPosts) || null}
           <div className={styles.imageContainer}>
             {
               instaPosts.slice(0,8).map((post, i) => {

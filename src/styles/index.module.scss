@@ -28,6 +28,11 @@
   }
 }
 
+.testimonial-section {
+  width: 100%;
+  margin: 140px 0;
+}
+
 .follow-section {
   display: flex;
   flex-direction: row;
@@ -46,7 +51,6 @@
     .insta-image {
       flex: 1 0 25%;
       height: auto;
-      // width: 25%;
     }
   }
 
