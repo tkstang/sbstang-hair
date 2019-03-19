@@ -8,6 +8,7 @@ const HeroContent = ({ text, buttonText, buttonLink }) => {
       <div className={styles.content}>
         {text}
       </div>
+      {/** Extract button to component */}
       <button className={styles.button}>
         <div className={styles.interior}>
           <div className={styles.text}>

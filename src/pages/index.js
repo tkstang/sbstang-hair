@@ -25,6 +25,7 @@ const IndexPage = () => (
         ]}
       />
       <HeroContent buttonText={'New Clients'}
+        // Add button link
         text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lobore'}
       />
     </div>

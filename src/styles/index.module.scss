@@ -2,7 +2,8 @@
 
 .hero-container {
   width: calc(100% - 140px);
-  // min-height: 820px;
+  min-height: 725px;
+  max-height: 940px;
   height: 100vh;
   position: relative;
 }
