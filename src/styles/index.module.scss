@@ -1,9 +1,29 @@
 @import "variables";
+@import "mixins";
 
 .hero-container {
   width: calc(100% - 140px);
-  min-height: 725px;
-  max-height: 940px;
+  // min-height: 725px;
+  max-height: 920px;
   height: 100vh;
   position: relative;
+}
+
+.content-container {
+  @include content-container;
+}
+
+.section-header {
+  @include section-header;
+}
+
+.booking-section {
+  text-align: center;
+  font-size: 28px;
+  max-width: 800px;
+  margin: 120px 0;
+
+  .button-container {
+    margin-top: 40px;
+  }
 }

@@ -8,7 +8,7 @@ const Socials = ({ theme }) => (
     <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">
       <FaFacebookF className={`${styles.icon} ${styles.facebook}`}/>
     </a>
-    <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <a href="http://www.instagram.com/sbstanghair" target="_blank" rel="noopener noreferrer">
       <FaInstagram className={`${styles.icon} ${styles.instagram}`}/>
     </a>
   </div>

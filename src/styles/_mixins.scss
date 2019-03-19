@@ -1,0 +1,25 @@
+@import "variables";
+
+@mixin section-header() {
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  .section-line {
+    height: 1px;
+    width: 100px;
+    border: 3px solid $pale-gold;
+    margin: 10px auto 60px;
+  }
+}
+
+
+@mixin content-container() {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

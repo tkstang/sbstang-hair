@@ -4,9 +4,8 @@
 }
 
 .image-container {
-  // max-height: 725px;
-  max-height: 100vh;
-  height: 725px;
+  max-height: 800px;
+  height: calc(100vh - 120px);
 }
 
 .image {

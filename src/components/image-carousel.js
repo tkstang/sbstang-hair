@@ -9,10 +9,10 @@ const ImageCarousel = ({ imageLinks, autoPlay }) => {
   return (
     <Carousel className={styles.imageCarousel} showArrows={false} showThumbs={false} showStatus={false} autoPlay={autoPlay} infiniteLoop>
       {
-        imageLinks.map((imageLink) => {
+        imageLinks.map((imageLink, i) => {
           return (
             <div className={styles.imageContainer}>
-              <img className={styles.image} src={imageLink} />
+              <img className={styles.image} src={imageLink} key-={`image${i}`} alt={'hero'}/>
             </div>
           )
         })

@@ -34,10 +34,9 @@ const Navigation = props => {
 
   useEffect(() => {
     Object.values(links).forEach((value) => {
-      const [width, setWidth] = value.width;
+      const setWidth = value.width[1];
       setWidth(value.ref.current.clientWidth);
-      console.log(width);
-    })
+    }, [])
   });
 
   const getFlexBasisStyle = (linkName) => {

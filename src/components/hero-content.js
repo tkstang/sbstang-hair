@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from "styles/hero-content.module.scss"
+import Button from "components/button"
 
 const HeroContent = ({ text, buttonText, buttonLink }) => {
   return (
@@ -8,14 +9,7 @@ const HeroContent = ({ text, buttonText, buttonLink }) => {
       <div className={styles.content}>
         {text}
       </div>
-      {/** Extract button to component */}
-      <button className={styles.button}>
-        <div className={styles.interior}>
-          <div className={styles.text}>
-            {buttonText}
-          </div>
-        </div>
-      </button>
+      <Button buttonText={buttonText} buttonLink={buttonLink} />
     </div>
   )
 }
