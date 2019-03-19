@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import styles from "styles/button.module.scss"
 
 const Button = ({ buttonText, buttonLink }) => {
-  console.log(buttonLink);
   const internalLink = buttonLink.charAt(0) === '/' ? true : false;
 
   const button = (

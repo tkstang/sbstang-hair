@@ -5,10 +5,10 @@ import { FaInstagram, FaFacebookF } from "react-icons/fa"
 
 const Socials = ({ theme }) => (
   <div className={`${styles.socials} ${styles[theme]}`}>
-    <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.facebook.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
       <FaFacebookF className={`${styles.icon} ${styles.facebook}`}/>
     </a>
-    <a href="http://www.instagram.com/sbstanghair" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
       <FaInstagram className={`${styles.icon} ${styles.instagram}`}/>
     </a>
   </div>
