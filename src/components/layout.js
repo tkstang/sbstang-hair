@@ -27,8 +27,10 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <div className={styles.layoutContainer}>
-          <div className={styles.navigation}>
-            <Navigation />
+          <div className={styles.navContainer}>
+            <div className={styles.navigation}>
+              <Navigation />
+            </div>
           </div>
           <main className={styles.content}>{children}</main>
           <div className={styles.footer}>

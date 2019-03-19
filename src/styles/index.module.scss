@@ -1,0 +1,8 @@
+@import "variables";
+
+.hero-container {
+  width: calc(100% - 140px);
+  // min-height: 820px;
+  height: 100vh;
+  position: relative;
+}

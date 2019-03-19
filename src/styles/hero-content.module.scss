@@ -1,0 +1,40 @@
+@import "variables";
+
+.hero-content {
+  padding: 40px 65px;
+  width: 600px;
+  background-color: $white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  // top: 540px;
+
+  .content {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    height: 60px;
+    min-width: 250px;
+    background-color: #EEE8AA;
+    padding: 8px ;
+    border: none;
+
+    .interior {
+      border: 1px solid $white;
+      height: 100%;
+      width: 100%;
+
+      .text {
+        color: $white;
+        font-size: 18px;
+        line-height: 42px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
