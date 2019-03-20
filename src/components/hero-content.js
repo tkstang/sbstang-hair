@@ -9,7 +9,9 @@ const HeroContent = ({ text, buttonText, buttonLink }) => {
       <div className={styles.content}>
         {text}
       </div>
-      <Button buttonText={buttonText} buttonLink={buttonLink} />
+      <div className={styles.buttonContainer}>
+        <Button buttonText={buttonText} buttonLink={buttonLink} />
+      </div>
     </div>
   )
 }

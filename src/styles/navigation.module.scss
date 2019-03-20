@@ -2,6 +2,7 @@
 @import "mixins";
 
 // To Do: Combine shared styling
+
 @include md-down {
   .navigation {
     display: flex;
@@ -39,6 +40,10 @@
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
+
+        &:hover {
+          color: $pale-gold;
+        }
 
         a {
           text-decoration: none;
@@ -107,6 +112,10 @@
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
+
+        &:hover {
+          color: $pale-gold;
+        }
 
         a {
           text-decoration: none;

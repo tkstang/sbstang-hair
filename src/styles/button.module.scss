@@ -1,11 +1,16 @@
 @import "variables";
+@import "mixins";
 
 .button {
   height: 60px;
-  min-width: 250px;
+  width: calc(100vw - 140px);
   background-color: #EEE8AA;
   padding: 8px ;
   border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   .interior {
     border: 1px solid $white;
@@ -20,5 +25,9 @@
       text-align: center;
       text-transform: uppercase;
     }
+  }
+
+  @include md {
+    width: 250px;
   }
 }
