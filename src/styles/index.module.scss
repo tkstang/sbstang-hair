@@ -65,7 +65,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    color: $white;
     text-transform: uppercase;
     font-size: 28px;
     letter-spacing: 4px;
@@ -82,15 +81,29 @@
       color: $white;
       text-decoration: none;
 
+      .icon {
+        &:hover {
+          color: $pale-gold;
+        }
+      }
+
       .follow-text {
         // padding: 0 80px;
         max-width: 300px;
         margin: 0 auto;
+
+        &:hover {
+          color: $pale-gold;
+        }
       }
 
       .handle {
         color: grey;
         margin-top: 20px;
+
+        &:hover {
+          color: $pale-gold;
+        }
       }
     }
   }
