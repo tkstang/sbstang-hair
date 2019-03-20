@@ -4,8 +4,7 @@ import { Media } from 'react-breakpoints'
 import Socials from 'components/socials'
 import styles from 'styles/navigation.module.scss'
 
-const Navigation = props => {
-
+const Navigation = ({ mobileNavActive, mobile }) => {
   const links = {
     clientLink: {
       ref: useRef(null),
@@ -49,16 +48,10 @@ const Navigation = props => {
   }
 
   return (
-    <div className={styles.navigation}>
-      <Media>
-        {({ breakpoints, currentBreakpoint }) => (
-          breakpoints[currentBreakpoint] >= breakpoints.lg ? (
-            <div className={styles.socialsContainer}>
-              <Socials theme="light" />
-            </div>
-          ) : null
-        )}
-      </Media>
+    <div className={`${styles.navigation} ${mobileNavActive ? styles.open : ''}`}>
+      <div className={styles.socialsContainer}>
+        <Socials theme={mobile ? 'dark' : 'light'} />
+      </div>
       <div className={styles.linksContainer}>
         <div className={styles.linkItem} style={getFlexBasisStyle('clientLink')}>
           <Link ref={links.clientLink.ref} className={styles.link} to="/new-clients">New Clients</Link>

@@ -46,6 +46,14 @@ module.exports = {
         access_token: "5604180889.1677ed0.56526fed699d408c8d40361b3555461d"
       }
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `sbstanghair`,
+        access_token: "a valid access token",
+        instagram_id: "11857677",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

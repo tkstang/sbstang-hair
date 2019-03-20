@@ -9,6 +9,7 @@ import styles from "styles/layout.module.scss"
 
 const Layout = ({ children }) => {
   const [navActive, toggleNavState] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   return (
     <StaticQuery
@@ -26,9 +27,12 @@ const Layout = ({ children }) => {
           <div className={styles.layoutContainer}>
             <div className={styles.navContainer}>
               <Media>
-                {({ breakpoints, currentBreakpoint }) => (
-                  breakpoints[currentBreakpoint] < breakpoints.lg ? (
-                    <div className={`${styles.navButtonCircle} ${navActive ? styles.active : ''}`}
+                {({ breakpoints, currentBreakpoint }) => {
+                  if (breakpoints[currentBreakpoint] < breakpoints.lg) {
+                    setMobile(true);
+
+                    return (
+                      <div className={`${styles.navButtonCircle} ${navActive ? styles.active : ''}`}
                       onClick={() => toggleNavState(!navActive)}>
                       <div className={`${styles.navButton} ${navActive ? styles.active : ''}`}>
                       <span className={styles.top} />
@@ -36,11 +40,14 @@ const Layout = ({ children }) => {
                       <span className={styles.bottom} />
                       </div>
                     </div>
-                  ) : null
-                )}
+                    )
+                  } else {
+                    setMobile(false);
+                  }
+                }}
               </Media>
               <div className={`${styles.navigation} ${navActive ? styles.open : ''}`}>
-                <Navigation active={navActive} />
+                <Navigation mobileNavActive={navActive} mobile={mobile} />
               </div>
             </div>
             <main className={styles.content}>{children}</main>

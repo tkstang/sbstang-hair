@@ -92,24 +92,9 @@
     overflow: hidden;
 
     &.open {
-      opacity: .98;
+      opacity: 1;
       visibility: visible;
       height: 100%;
-
-      li {
-        animation: fadeInRight .5s ease forwards;
-        animation-delay: .35s;
-
-        &:nth-of-type(2) {
-          animation-delay: .4s;
-        }
-        &:nth-of-type(3) {
-          animation-delay: .45s;
-        }
-        &:nth-of-type(4) {
-          animation-delay: .50s;
-        }
-      }
     }
   }
 
