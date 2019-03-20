@@ -1,13 +1,123 @@
+@import "variables";
+@import "mixins";
+
 .layout-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
+// To Do: Hide nav button when scrolling
+.nav-button-circle {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  height: 58px;
+  width: 58px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  background-color: $charcoal;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.nav-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  height: 22px;
+  width: 32px;
+  cursor: pointer;
+  z-index: 101;
+  transition: opacity .25s ease;
+  background-color: $charcoal;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &.active {
+    .top {
+      transform: translateY(9px) translateX(0) rotate(45deg);
+      background-color: $pale-gold;
+    }
+    .middle {
+      opacity: 0;
+      background-color: $pale-gold;
+    }
+
+    .bottom {
+      transform: translateY(-9px) translateX(0) rotate(-45deg);
+      background-color: $pale-gold;
+    }
+  }
+
+  span {
+    background-color: $pale-gold;
+    border: none;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 9px;
+    }
+
+    &:nth-of-type(3) {
+      top: 18px;
+    }
+  }
+}
+
 .navigation {
-  position: absolute;
-  right: 0px;
-  height: 100%;
+  @include md-down {
+    position: fixed;
+    background: $charcoal;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 50;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+
+    &.open {
+      opacity: .98;
+      visibility: visible;
+      height: 100%;
+
+      li {
+        animation: fadeInRight .5s ease forwards;
+        animation-delay: .35s;
+
+        &:nth-of-type(2) {
+          animation-delay: .4s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: .45s;
+        }
+        &:nth-of-type(4) {
+          animation-delay: .50s;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+  }
 }
 
 .content {
