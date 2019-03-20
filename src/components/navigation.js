@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Link } from 'gatsby'
-import { Media } from 'react-breakpoints'
 import Socials from 'components/socials'
 import styles from 'styles/navigation.module.scss'
 

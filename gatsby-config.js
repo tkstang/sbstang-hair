@@ -43,14 +43,14 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram-all`,
       options: {
-        access_token: "5604180889.1677ed0.56526fed699d408c8d40361b3555461d"
+        access_token: "11857677.1677ed0.2a1c808a3ec3471dbfabe78d864da2e8"
       }
     },
     {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `sbstanghair`,
-        access_token: "a valid access token",
+        access_token: "11857677.1677ed0.2a1c808a3ec3471dbfabe78d864da2e8",
         instagram_id: "11857677",
       },
     },

@@ -17,6 +17,11 @@
 
     .icon {
       color: $white;
+
+      &:hover {
+        // To do use darker gold on white background
+        color: $pale-gold;
+      }
     }
   }
 
@@ -25,6 +30,10 @@
 
     .icon {
       color: $charcoal;
+
+      &:hover {
+        color: $pale-gold;
+      }
     }
   }
 

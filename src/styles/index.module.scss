@@ -30,6 +30,9 @@
 
 .testimonial-section {
   width: 100%;
+  max-width: 100vw;
+  // Remove overflow when mobile styling is added
+  overflow: hidden;
   margin: 140px 0;
 }
 
@@ -38,6 +41,8 @@
   flex-direction: row;
   background-color: $charcoal;
   width: 100%;
+  // Remove overflow when mobile styling is added
+  overflow: hidden;
 
   .image-container {
     flex: 1 0 60%;
