@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { Link } from "gatsby"
-import Socials from "components/socials"
-import styles from "styles/navigation.module.scss"
+import { Link } from 'gatsby'
+import { Media } from 'react-breakpoints'
+import Socials from 'components/socials'
+import styles from 'styles/navigation.module.scss'
 
 const Navigation = props => {
 
@@ -49,9 +50,15 @@ const Navigation = props => {
 
   return (
     <div className={styles.navigation}>
-      <div className={styles.socialsContainer}>
-        <Socials theme="light" />
-      </div>
+      <Media>
+        {({ breakpoints, currentBreakpoint }) => (
+          breakpoints[currentBreakpoint] >= breakpoints.lg ? (
+            <div className={styles.socialsContainer}>
+              <Socials theme="light" />
+            </div>
+          ) : null
+        )}
+      </Media>
       <div className={styles.linksContainer}>
         <div className={styles.linkItem} style={getFlexBasisStyle('clientLink')}>
           <Link ref={links.clientLink.ref} className={styles.link} to="/new-clients">New Clients</Link>
