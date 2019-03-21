@@ -18,11 +18,16 @@
   border-radius: 50%;
   cursor: pointer;
   z-index: 100;
+  opacity: .8;
   transition: opacity .25s ease;
-  background-color: $charcoal;
+  background-color: $white;
 
   &:hover {
-    opacity: .7;
+    opacity: 1;
+
+    span {
+      background-color: $pale-gold;
+    }
   }
 }
 
@@ -35,12 +40,9 @@
   width: 32px;
   cursor: pointer;
   z-index: 101;
+  opacity: .8;
   transition: opacity .25s ease;
-  background-color: $charcoal;
-
-  &:hover {
-    opacity: .7;
-  }
+  background-color: $white;
 
   &.active {
     .top {
@@ -59,9 +61,9 @@
   }
 
   span {
-    background-color: $pale-gold;
+    background-color: darken($pale-gold, 20%);
     border: none;
-    height: 1px;
+    height: 2px;
     width: 100%;
     position: absolute;
     top: 0;
