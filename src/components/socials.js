@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from "styles/socials.module.scss";
+import styles from "styles/socials.module.scss"
 import { FaInstagram, FaFacebookF } from "react-icons/fa"
 
 const Socials = ({ theme }) => (
