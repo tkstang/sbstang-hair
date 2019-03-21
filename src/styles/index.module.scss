@@ -40,13 +40,12 @@
 .follow-section {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: $charcoal;
   width: 100%;
-  // Remove overflow when mobile styling is added
-  overflow: hidden;
 
   .image-container {
-    flex: 1 0 60%;
+    flex: 1 0 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -55,13 +54,13 @@
     background-color: grey;
 
     .insta-image {
-      flex: 1 0 25%;
+      flex: 1 0 50%;
       height: auto;
     }
   }
 
   .follow-container {
-    flex: 1 0 40%;
+    flex: 1 0 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +70,7 @@
     letter-spacing: 4px;
     line-height: 33px;
     text-align: center;
-    padding: 20px 40px;
+    padding: 100px 40px;
 
     .icon {
       font-size: 38px;
@@ -89,7 +88,6 @@
       }
 
       .follow-text {
-        // padding: 0 80px;
         max-width: 300px;
         margin: 0 auto;
 
@@ -106,6 +104,24 @@
           color: $pale-gold;
         }
       }
+    }
+  }
+}
+
+@include md {
+  .follow-section {
+
+    .image-container {
+      flex: 1 0 60%;
+
+      .insta-image {
+        flex: 1 0 25%;
+      }
+    }
+
+    .follow-container {
+      flex: 1 0 40%;
+      padding: 20px 40px;
     }
   }
 }

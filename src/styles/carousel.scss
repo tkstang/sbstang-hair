@@ -1,7 +1,31 @@
-// Style overrides for carousel library
+@import "mixins";
 
-.control-dots {
-  padding-right: 600px;
+// Style overrides for carousel library
+.carousel {
+  .control-dots {
+    left: 0;
+    text-align: left;
+    padding: none;
+    margin: 0 !important;
+    bottom: calc(50% - 36px) !important;
+    width: 20px !important;
+
+    .dot {
+    }
+
+    @include md {
+      padding-bottom: 0;
+      padding-right: 500px;
+      text-align: center;
+      margin: 10px 0 !important;
+      width: 100% !important;
+      bottom: 0 !important;
+    }
+
+    @include lg {
+      padding-right: 600px;
+    }
+  }
 }
 
 .carousel img {
