@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 // To Do: Add centered md-down styling
 .footer {
@@ -6,16 +7,25 @@
   display: flex;
   flex: 1 0 auto;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 34px 46px;
 
   .copyright {
+    order: 1;
     color: $white;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: left;
-    flex-basis: 60%;
+    text-align: center;
+    flex-basis: 100%;
     font-size: 12px;
-    margin: auto 0;
+    margin: 20px 0 0;
+
+    @include sm {
+      order: 0;
+      flex-basis: 60%;
+      text-align: left;
+      margin: auto 0;
+    }
   }
 }

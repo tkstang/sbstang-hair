@@ -1,9 +1,10 @@
 @import "variables";
+@import "mixins";
 
 .socials {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   flex-basis: 40%;
   font-size: 18px;
   padding-top: 8px;
@@ -42,5 +43,9 @@
   }
 
   .instagram {
+  }
+
+  @include sm {
+    justify-content: flex-end;
   }
 }

@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div className={styles.heroContainer}>
         <ImageCarousel
-          // autoPlay={true}
+          autoPlay={true}
           imageLinks={[
             wedding1,
             image2,
