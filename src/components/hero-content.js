@@ -10,7 +10,7 @@ const HeroContent = ({ text, buttonText, buttonLink }) => {
         {text}
       </div>
       <div className={styles.buttonContainer}>
-        <Button buttonText={buttonText} buttonLink={buttonLink} />
+        <Button buttonText={buttonText} buttonLink={buttonLink} customClass={'carousel'} />
       </div>
     </div>
   )

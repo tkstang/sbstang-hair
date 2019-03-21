@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
           </div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
           <div className={styles.buttonContainer}>
-            <Button buttonText={'Book Now'} buttonLink={'https://www.umbrellasalon.com/book-online/'} />
+            <Button width={'250px'} buttonText={'Book Now'} buttonLink={'https://www.umbrellasalon.com/book-online/'} />
           </div>
         </div>
       </div>

@@ -3,10 +3,18 @@
 
 .button {
   height: 60px;
-  width: calc(100vw - 140px);
+  width: 250px;
   background-color: #EEE8AA;
   padding: 8px ;
   border: none;
+
+  &.carousel {
+    width: calc(100vw - 140px);
+
+    @include md {
+      width: 250px;
+    }
+  }
 
   &:hover {
     cursor: pointer;
@@ -25,9 +33,5 @@
       text-align: center;
       text-transform: uppercase;
     }
-  }
-
-  @include md {
-    width: 250px;
   }
 }

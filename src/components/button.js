@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import { Link } from "gatsby"
 import styles from "styles/button.module.scss"
 
-const Button = ({ buttonText, buttonLink, width }) => {
+const Button = ({ buttonText, buttonLink, width, customClass }) => {
   const internalLink = buttonLink.charAt(0) === '/' ? true : false;
 
   const button = (
-    <button className={styles.button} style={ width ? { width: width }  : {} }>
+    <button className={`${styles.button} ${customClass ? styles[customClass] : ''}`}
+      style={ width ? { width: width }  : {} }>
       <div className={styles.interior}>
         <div className={styles.text}>
           {buttonText}
@@ -30,12 +31,14 @@ const Button = ({ buttonText, buttonLink, width }) => {
 Button.propTypes = {
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
+  customClass: PropTypes.string,
   width: PropTypes.string
 }
 
 Button.defaultProps = {
   buttonText: '',
   buttonLink: '',
+  customClass: PropTypes.string,
   width: ''
 }
 
