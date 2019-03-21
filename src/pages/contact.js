@@ -15,25 +15,40 @@ const Contact = () => (
       </div>
       <div className={styles.contactContainer}>
         <div className={styles.contactItem}>
-          <a href="tel:+01-408-293-4242">
-            <FaPhone className={styles.icon} />
-          </a>
+          <div className={styles.contactLink}>
+            <a href="tel:+01-408-293-4242">
+              <FaPhone className={styles.icon} />
+              408-293-4242
+            </a>
+          </div>
         </div>
         <div className={styles.contactItem}>
-          <a href="mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com">
-            <FaEnvelope className={styles.icon} />
-          </a>
+          <div className={styles.contactLink}>
+            <a href="mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com">
+              <FaEnvelope className={styles.icon} />
+              sbstanghair@gmail.com
+            </a>
+          </div>
         </div>
         <div className={styles.contactItem}>
-
+          <div className={styles.contactLink}>
+            <a href="https://maps.google.com/?q=2 N Market St #100, San Jose, CA 95113" target="_blank" rel="noopener noreferrer">
+                <FaCut className={styles.icon} />
+                <span>2 N Market St #100</span>
+                <span>San Jose, CA 95113</span>
+            </a>
+          </div>
         </div>
         <div className={styles.contactItem}>
-          <a href="https://www.facebook.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF className={`${styles.icon} ${styles.facebook}`}/>
-          </a>
-          <a href="https://www.instagram.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className={`${styles.icon} ${styles.instagram}`}/>
-          </a>
+          <div className={styles.contactLink}>
+            <a href="https://www.facebook.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF className={`${styles.icon} ${styles.facebook}`}/>
+            </a>
+            <a href="https://www.instagram.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className={`${styles.icon} ${styles.instagram}`}/>
+            </a>
+            @sbstanghair
+          </div>
         </div>
       </div>
     </div>
