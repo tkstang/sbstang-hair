@@ -53,22 +53,28 @@ const Navigation = ({ mobileNavActive, mobile }) => {
       </div>
       <div className={styles.linksContainer}>
         <div className={styles.linkItem} style={getFlexBasisStyle('clientLink')}>
-          <Link ref={links.clientLink.ref} className={styles.link} to="/new-clients">New Clients</Link>
+          <Link ref={links.clientLink.ref} to="/new-clients" className={styles.link}
+            activeClassName={styles.active}>New Clients</Link>
         </div>
         <div className={styles.linkItem} style={getFlexBasisStyle('servicesLink')}>
-          <Link ref={links.servicesLink.ref} className={styles.link} to="/services">Services</Link>
+          <Link ref={links.servicesLink.ref} to="/services" className={styles.link}
+            activeClassName={styles.active}>Services</Link>
         </div>
         <div className={styles.linkItem} style={getFlexBasisStyle('galleryLink')}>
-          <Link ref={links.galleryLink.ref} className={styles.link} to="/gallery">Gallery</Link>
+          <Link ref={links.galleryLink.ref} to="/gallery" className={styles.link}
+            activeClassName={styles.active}>Gallery</Link>
         </div>
         <div className={styles.linkItem} style={getFlexBasisStyle('aboutLink')}>
-          <Link ref={links.aboutLink.ref} className={styles.link} to="/about">About</Link>
+          <Link ref={links.aboutLink.ref} to="/about" className={styles.link}
+            activeClassName={styles.active}>About</Link>
         </div>
         <div className={styles.linkItem} style={getFlexBasisStyle('contactLink')}>
-          <Link ref={links.contactLink.ref} className={styles.link} to="/contact">Contact</Link>
+          <Link ref={links.contactLink.ref} to="/contact" className={styles.link}
+            activeClassName={styles.active}>Contact</Link>
         </div>
         <div className={styles.linkItem} style={getFlexBasisStyle('faqLink')}>
-          <Link ref={links.faqLink.ref} className={styles.link} to="/faq">FAQ</Link>
+          <Link ref={links.faqLink.ref} to="/faq" className={styles.link}
+            activeClassName={styles.active}>FAQ</Link>
         </div>
       </div>
     </div>

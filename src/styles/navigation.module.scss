@@ -45,6 +45,10 @@
           color: $pale-gold;
         }
 
+        &.active {
+          color: $pale-gold-10;
+        }
+
         a {
           text-decoration: none;
         }
@@ -109,11 +113,18 @@
         transform-origin: left top 0;
         color: $charcoal;
         font-size: 20px;
+        // line-height: 22px;
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
 
         &:hover {
+          /** To add border on hover uncomment this, uncomment 22px line height above and reduce socials container margin right from 40px to 30px */
+          // border-bottom: 3px solid $pale-gold;
+          color: $pale-gold;
+        }
+
+        &.active {
           color: $pale-gold;
         }
 
