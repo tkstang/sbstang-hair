@@ -23,3 +23,4 @@ Socials.defaultProps = {
 }
 
 export default Socials
+

@@ -26,7 +26,14 @@ const Contact = () => (
           <div className={styles.contactLink}>
             <a href="mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com">
               <FaEnvelope className={styles.icon} />
-              sbstanghair@gmail.com
+              <div className={styles.email}>
+                <span>
+                sbstanghair
+                </span>
+                <span>
+                @gmail.com
+                </span>
+              </div>
             </a>
           </div>
         </div>
@@ -41,13 +48,15 @@ const Contact = () => (
         </div>
         <div className={styles.contactItem}>
           <div className={styles.contactLink}>
-            <a href="https://www.facebook.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF className={`${styles.icon} ${styles.facebook}`}/>
-            </a>
-            <a href="https://www.instagram.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className={`${styles.icon} ${styles.instagram}`}/>
-            </a>
-            @sbstanghair
+            <div className={styles.socialIcons}>
+              <a href="https://www.facebook.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF className={`${styles.icon} ${styles.facebook}`}/>
+              </a>
+              <a href="https://www.instagram.com/sbstanghair/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className={`${styles.icon} ${styles.instagram}`}/>
+              </a>
+            </div>
+            <div className={styles.handle}>@sbstanghair</div>
           </div>
         </div>
       </div>
