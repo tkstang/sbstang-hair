@@ -6,7 +6,7 @@ import styles from "styles/contact.module.scss"
 
 const Contact = () => (
   <Layout>
-    {/** To Do: Improve SEO */}
+    {/** To Do: Improve SEO */}w
     <SEO title="Contact" />
     <div className={styles.contactSection}>
       <div className={styles.sectionHeader}>

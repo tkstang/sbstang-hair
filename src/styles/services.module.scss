@@ -25,6 +25,20 @@
         flex-direction: column;
         flex: 1 0 100%;
         background-color: #F6F6F6;
+        position: relative;
+
+        &:nth-of-type(2) {
+          padding-bottom: 80px;
+        }
+
+        .pricing-note {
+          position: absolute;
+          bottom: 0;
+          font-size: 14px;
+          margin: 5px 0;
+          text-align: center;
+          width: 100%;
+        }
 
         .services-item {
           display: flex;
@@ -35,6 +49,7 @@
             margin-top: 80px;
 
             .section-line {
+              width: 130px;
               border: 3px solid $pale-gold-20;
               margin-bottom: 30px;
             }
@@ -64,8 +79,7 @@
   @include lg {
 
     .pricing-section {
-      margin-top: 100px;
-      padding: 0 10%;
+      padding: 60px 10%;
 
       .pricing-container {
         flex: 1 0 100%;

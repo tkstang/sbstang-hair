@@ -86,13 +86,14 @@ const Services = () => (
               </div>
               <div className={styles.service}>
                 <li className={styles.serviceName}>Bridal Hair</li>
-                <span className={styles.price}>Varies</span>
+                <span className={styles.price}>Consultation</span>
               </div>
               <div className={styles.service}>
                 <li className={styles.serviceName}>Bridal Makeup</li>
-                <span className={styles.price}>Varies</span>
+                <span className={styles.price}>Consultation</span>
               </div>
             </div>
+            <div className={styles.pricingNote}>All service prices are subject to change upon consultation</div>
           </div>
         </div>
       </div>
