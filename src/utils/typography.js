@@ -2,15 +2,19 @@ import Typography from "typography";
 
 const typography = new Typography({
   baseFontSize: "13px",
-  bodyFontFamily: ["PT Sans Narrow"],
+  bodyFontFamily: ["Montserrat"],
   googleFonts: [
     {
-      name: 'PT Sans Narrow',
+      name: 'Montserrat',
       styles: [
+        '200',
         '300',
         '400',
         '500',
+        '600',
         '700',
+        '800',
+        '900',
       ],
     },
   ],
