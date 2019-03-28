@@ -38,7 +38,7 @@ Button.propTypes = {
 Button.defaultProps = {
   buttonText: '',
   buttonLink: '',
-  customClass: PropTypes.string,
+  customClass: '',
   width: ''
 }
 
