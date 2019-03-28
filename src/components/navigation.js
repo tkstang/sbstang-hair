@@ -40,11 +40,13 @@ const Navigation = ({ mobileNavActive, mobile }) => {
 
   const getFlexBasisStyle = (linkName) => {
     const linkWidth = links[linkName].width[0];
-
+    console.log(linkName, linkWidth + 40);
     return {
       flexBasis: linkWidth + 40
     }
   }
+
+  // Once styling is set static flex basis can be used and flexBasisStyle function/use effect can be removed
 
   return (
     <div className={`${styles.navigation} ${mobileNavActive ? styles.open : ''}`}>
@@ -52,27 +54,27 @@ const Navigation = ({ mobileNavActive, mobile }) => {
         <Socials theme={mobile ? 'dark' : 'light'} />
       </div>
       <div className={styles.linksContainer}>
-        <div className={styles.linkItem} style={getFlexBasisStyle('clientLink')}>
+        <div className={styles.linkItem} style={{ flexBasis: 155 }}>
           <Link ref={links.clientLink.ref} to="/new-clients" className={styles.link}
             activeClassName={styles.active}>New Clients</Link>
         </div>
-        <div className={styles.linkItem} style={getFlexBasisStyle('servicesLink')}>
+        <div className={styles.linkItem} style={{ flexBasis: 121 }}>
           <Link ref={links.servicesLink.ref} to="/services" className={styles.link}
             activeClassName={styles.active}>Services</Link>
         </div>
-        <div className={styles.linkItem} style={getFlexBasisStyle('galleryLink')}>
+        <div className={styles.linkItem} style={{ flexBasis: 116 }}>
           <Link ref={links.galleryLink.ref} to="/gallery" className={styles.link}
             activeClassName={styles.active}>Gallery</Link>
         </div>
-        <div className={styles.linkItem} style={getFlexBasisStyle('aboutLink')}>
+        <div className={styles.linkItem} style={{ flexBasis: 99 }}>
           <Link ref={links.aboutLink.ref} to="/about" className={styles.link}
             activeClassName={styles.active}>About</Link>
         </div>
-        <div className={styles.linkItem} style={getFlexBasisStyle('contactLink')}>
+        <div className={styles.linkItem} style={{ flexBasis: 119 }}>
           <Link ref={links.contactLink.ref} to="/contact" className={styles.link}
             activeClassName={styles.active}>Contact</Link>
         </div>
-        <div className={styles.linkItem} style={getFlexBasisStyle('faqLink')}>
+        <div className={styles.linkItem} style={{ flexBasis: 75 }}>
           <Link ref={links.faqLink.ref} to="/faq" className={styles.link}
             activeClassName={styles.active}>FAQ</Link>
         </div>
