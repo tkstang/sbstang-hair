@@ -20,6 +20,7 @@
 .booking-section {
   text-align: center;
   font-size: 28px;
+  font-weight: 300;
   width: 800px;
   max-width: 80%;
   margin: 120px 0;
@@ -32,8 +33,6 @@
 .testimonial-section {
   width: 100%;
   max-width: 100vw;
-  // Remove overflow when mobile styling is added
-  overflow: hidden;
   margin: 140px 0;
 }
 
@@ -90,6 +89,7 @@
       .follow-text {
         max-width: 300px;
         margin: 0 auto;
+        font-weight: 300;
 
         &:hover {
           color: $pale-gold;
@@ -99,6 +99,7 @@
       .handle {
         color: grey;
         margin-top: 20px;
+        font-weight: 200;
 
         &:hover {
           color: $pale-gold;

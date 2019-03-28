@@ -109,10 +109,11 @@
 
       .link {
         float: left;
-        transform: rotate(90deg) translateY(-70px);
+        transform: rotate(90deg) translateY(-78px);
         transform-origin: left top 0;
         color: $charcoal;
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 500;
         // line-height: 22px;
         text-transform: uppercase;
         text-decoration: none;

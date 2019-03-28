@@ -14,10 +14,10 @@
     order: 1;
     color: $white;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
     text-align: center;
     flex-basis: 100%;
-    font-size: 12px;
+    font-size: 10px;
     margin: 20px 0 0;
 
     @include sm {
