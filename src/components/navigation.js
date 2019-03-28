@@ -46,7 +46,7 @@ const Navigation = ({ mobileNavActive, mobile }) => {
     }
   }
 
-  // Once styling is set static flex basis can be used and flexBasisStyle function/use effect can be removed
+  // Once styling is set static flex basis can be used and flexBasisStyle function/use effect can be removed as well as refs for links
 
   return (
     <div className={`${styles.navigation} ${mobileNavActive ? styles.open : ''}`}>

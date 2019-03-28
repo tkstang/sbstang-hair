@@ -2,5 +2,35 @@
 @import "mixins";
 
 .gallery-section {
+  height: calc(100vh - 103px);
+  .gallery-container {
+    padding: 60px 10%;
+    // 80px = 60px for top padding plus 20px for 20px margin of top image
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    background-color: $white;
 
+    .insta-image {
+      flex: 1 0 100%;
+      margin: 20px;
+      height: auto;
+      background-color: black;
+
+      @include sm {
+        flex: 1 0 calc(50% - 40px);
+      }
+
+      @include md {
+        flex: 1 0 calc(33.33% - 40px);
+      }
+
+      @include xl {
+        flex: 1 0 calc(25% - 40px);
+      }
+    }
+  }
 }

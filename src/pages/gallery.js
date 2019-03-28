@@ -1,17 +1,30 @@
-import React from "react"
-import Layout from "components/layout"
-import SEO from "components/seo"
-import styles from "styles/gallery.module.scss"
+import React from 'react'
+import Image from 'gatsby-image'
+import Layout from 'components/layout'
+import SEO from 'components/seo'
+import styles from 'styles/gallery.module.scss'
 
 const Gallery = ({ data }) => {
-  console.log(data);
   const instaPosts = data.allInstagramContent.edges.map(i => i.node);
+  console.log(instaPosts);
+  // To Do: Add more interactivity with posts? show comments, tags, etc?
 
   return (
     <Layout>
       {/** To Do: Improve SEO */}
       <SEO title="Gallery" />
       <div className={styles.gallerySection}>
+        <div className={styles.galleryContainer}>
+          {
+            instaPosts.map((post, i) => {
+              return (
+                post.localImage ?
+                  <Image className={styles.instaImage} key={i} fluid={post.localImage.childImageSharp.fluid}/>
+                  : null
+              )
+            })
+          }
+        </div>
       </div>
     </Layout>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from "gatsby"
-import styles from "styles/button.module.scss"
+import { Link } from 'gatsby'
+import styles from 'styles/button.module.scss'
 
 const Button = ({ buttonText, buttonLink, width, customClass }) => {
   const internalLink = buttonLink.charAt(0) === '/' ? true : false;
