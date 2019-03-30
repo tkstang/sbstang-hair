@@ -15,7 +15,7 @@
 
 .booking-section {
   text-align: center;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
   width: 800px;
   max-width: 80%;
@@ -120,5 +120,12 @@
       flex: 1 0 40%;
       padding: 20px 40px;
     }
+  }
+}
+
+
+@include lg {
+  .booking-section {
+    font-size: 18px;
   }
 }
