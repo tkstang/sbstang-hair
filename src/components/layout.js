@@ -6,7 +6,7 @@ import Navigation from "components/navigation"
 import Footer from "components/footer"
 import styles from "styles/layout.module.scss"
 
-const { Media = null } = typeof window !== `undefined` ? require('react-media') : { Media: null }
+const { Media } = typeof window !== `undefined` ? require('react-media') : { Media: null }
 
 const Layout = ({ children }) => {
   const [navActive, toggleNavState] = useState(false);
