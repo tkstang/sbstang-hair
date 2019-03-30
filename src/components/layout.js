@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Media from "react-media"
@@ -10,6 +10,10 @@ import styles from "styles/layout.module.scss"
 const Layout = ({ children }) => {
   const [navActive, toggleNavState] = useState(false);
   const [mobile, setMobile] = useState(false);
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true);
+  })
 
   return (
     <StaticQuery
@@ -28,21 +32,26 @@ const Layout = ({ children }) => {
             <div className={styles.navContainer}>
               <Media query="(max-width: 991px)">
                 {(matches) => {
-                  if (matches) {
-                    setMobile(true);
+                  console.log(matches);
+                  if (mounted) {
+                    if (matches) {
+                      setMobile(true);
 
-                    return (
-                      <div className={`${styles.navButtonCircle} ${navActive ? styles.active : ''}`}
-                      onClick={() => toggleNavState(!navActive)}>
-                      <div className={`${styles.navButton} ${navActive ? styles.active : ''}`}>
-                      <span className={styles.top} />
-                      <span className={styles.middle} />
-                      <span className={styles.bottom} />
+                      return (
+                        <div className={`${styles.navButtonCircle} ${navActive ? styles.active : ''}`}
+                        onClick={() => toggleNavState(!navActive)}>
+                        <div className={`${styles.navButton} ${navActive ? styles.active : ''}`}>
+                        <span className={styles.top} />
+                        <span className={styles.middle} />
+                        <span className={styles.bottom} />
+                        </div>
                       </div>
-                    </div>
-                    )
+                      )
+                    } else {
+                      setMobile(false);
+                      return null;
+                    }
                   } else {
-                    setMobile(false);
                     return null;
                   }
                 }}
