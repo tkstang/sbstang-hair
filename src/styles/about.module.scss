@@ -3,6 +3,10 @@
 
 .about-section {
 
+  .section-header {
+    @include section-header;
+  }
+
   .hero-container {
     @include hero-container;
   }
@@ -13,5 +17,14 @@
     .hero-image {
       height: 100%;
     }
+  }
+
+  .content-section {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    width: 800px;
+    max-width: 80%;
+    margin: 120px 0;
   }
 }

@@ -23,9 +23,24 @@ const About = ({ data }) => (
         </div>
         <HeroContent buttonText={'Get In Touch'}
           buttonLink={'/mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com'}
-          // Add button link
-          text={`I'm going to make everything around me beautiful.  That will be my life. -Elise De Wolfe`}
+          text={`I'm going to make everything around me beautiful.  That will be my life. - Elise De Wolfe`}
         />
+      </div>
+      <div className={styles.contentContainer}>
+        <div className={styles.introSection}>
+          <div className={styles.sectionHeader}>
+            About Me
+            <div className={styles.sectionLine} />
+          </div>
+        </div>
+        <div className={styles.achievementsSection}>
+          <div className={styles.educationSection}>
+
+          </div>
+          <div className={styles.showsSection}>
+
+          </div>
+        </div>
       </div>
     </div>
   </Layout>

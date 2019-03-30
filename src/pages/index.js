@@ -35,7 +35,6 @@ const IndexPage = ({ data }) => {
         />
         <HeroContent buttonText={'New Clients'}
           buttonLink={'/new-clients'}
-          // Add button link
           text={'Great hair doesn\'t happen by chance.  It happens by appointment.'}
         />
       </div>
