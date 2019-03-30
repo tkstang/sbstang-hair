@@ -1,0 +1,30 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  background-color: $charcoal;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 34px 46px;
+
+  .copyright {
+    order: 1;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    text-align: center;
+    flex-basis: 100%;
+    font-size: 10px;
+    margin: 20px 0 0;
+
+    @include sm {
+      order: 0;
+      flex-basis: 60%;
+      text-align: left;
+      margin: auto 0;
+    }
+  }
+}

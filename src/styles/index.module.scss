@@ -1,0 +1,124 @@
+@import "variables";
+@import "mixins";
+
+.hero-container {
+  @include hero-container;
+}
+
+.content-container {
+  @include content-container;
+}
+
+.section-header {
+  @include section-header;
+}
+
+.booking-section {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  width: 800px;
+  max-width: 80%;
+  margin: 120px 0;
+
+  .button-container {
+    margin-top: 40px;
+  }
+}
+
+.testimonial-section {
+  width: 100%;
+  max-width: 100vw;
+  margin: 140px 0;
+}
+
+.follow-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: $charcoal;
+  width: 100%;
+
+  .image-container {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    //temp
+    background-color: grey;
+
+    .insta-image {
+      flex: 1 0 50%;
+      height: auto;
+    }
+  }
+
+  .follow-container {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 4px;
+    line-height: 33px;
+    text-align: center;
+    padding: 100px 40px;
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      .icon {
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .follow-text {
+        max-width: 300px;
+        margin: 0 auto;
+        font-weight: 300;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .handle {
+        color: grey;
+        margin-top: 20px;
+        font-weight: 200;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .follow-section {
+
+    .image-container {
+      flex: 1 0 60%;
+
+      .insta-image {
+        flex: 1 0 25%;
+      }
+    }
+
+    .follow-container {
+      flex: 1 0 40%;
+      padding: 20px 40px;
+    }
+  }
+}

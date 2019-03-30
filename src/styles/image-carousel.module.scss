@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+
+.image-carousel {
+}
+
+.hero-image-container {
+  @include hero-image-container;
+}
+
+.image {
+  height: 100%;
+}

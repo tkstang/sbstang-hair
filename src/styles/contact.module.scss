@@ -1,0 +1,123 @@
+@import "variables";
+@import "mixins";
+
+.contact-section {
+  display: flex;
+  flex: 1 0 100%;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 140px;
+
+  .section-header {
+    @include section-header;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    margin-top: -20px;
+
+    .contact-item {
+      display: flex;
+      flex: 1 0 50%;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 40px 10px 40px;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+      }
+
+      .icon {
+        font-size: 32px;
+        margin-bottom: 30px;
+
+        &.facebook {
+          margin-right: 10px;
+        }
+      }
+
+      .contact-link {
+        font-size: 18px;
+
+        .email {
+          span {
+            display: block;
+            text-align: center;
+          }
+        }
+
+        .social-icons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          a {
+            .icon {
+              &:hover {
+                &.facebook {
+                  color: $primary;
+                }
+                &.instagram {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .social-icons {
+            a {
+              .icon {
+                color: $black;
+              }
+            }
+          }
+          a {
+            color: $primary;
+
+            .icon {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  @include sm {
+    margin: 0;
+    padding: 0 10%;
+    justify-content: center;
+  }
+
+  @include md {
+    padding: 0 20px;
+
+    .contact-container {
+      .contact-item {
+        flex: 1 0 25%;
+
+        .contact-link .email {
+          span {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+  }
+
+  @include lg {
+    padding: 0 10%;
+  }
+}

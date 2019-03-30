@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-basis: 40%;
+  font-size: 18px;
+  padding-top: 8px;
+
+  a {
+    margin: 0 0;
+    z-index: 100;
+  }
+
+  &.dark {
+    background-color: $charcoal;
+
+    .icon {
+      color: $white;
+
+      &:hover {
+        // To do use darker gold on white background
+        color: $primary;
+      }
+    }
+  }
+
+  &.light {
+    background-color: $white;
+
+    .icon {
+      color: $charcoal;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .facebook {
+    margin-right: 30px;
+  }
+
+  .instagram {
+  }
+
+  @include sm {
+    justify-content: flex-end;
+  }
+}

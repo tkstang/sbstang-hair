@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import ReactBreakpoints from 'react-breakpoints'
 
-// You can delete this file if you're not using it
+const breakpoints = {
+  xs: 425,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200
+}
+
+export const wrapRootElement = ({ element }) => {
+  return (
+    <ReactBreakpoints breakpoints={breakpoints}>
+      {element}
+    </ReactBreakpoints>
+  )
+}
