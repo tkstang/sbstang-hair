@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'gatsby-image'
+import { graphql } from "gatsby"
 import Layout from 'components/layout'
 import SEO from 'components/seo'
 import styles from 'styles/gallery.module.scss'
 
 const Gallery = ({ data }) => {
   const instaPosts = data.allInstagramContent.edges.map(i => i.node);
-  console.log(instaPosts);
   // To Do: Add more interactivity with posts? show comments, tags, etc?
 
   return (
