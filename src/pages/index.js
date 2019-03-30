@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
         <HeroContent buttonText={'New Clients'}
           buttonLink={'/new-clients'}
           // Add button link
-          text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lobore'}
+          text={'Great hair doesn\'t happen by chance.  It happens by appointment.'}
         />
       </div>
       <div className={styles.contentContainer}>
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
             Book An Appointment
             <div className={styles.sectionLine} />
           </div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+          Click the button below to visit the booking page for Umbrella Salon.  Simply select my name and your desired service to browse availability and book an appointment!
           <div className={styles.buttonContainer}>
             <Button width={'250px'} buttonText={'Book Now'} buttonLink={'https://www.umbrellasalon.com/book-online/'} />
           </div>

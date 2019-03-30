@@ -42,11 +42,11 @@
         cursor: pointer;
 
         &:hover {
-          color: $pale-gold;
+          color: $primary;
         }
 
         &.active {
-          color: $pale-gold;
+          color: $primary;
         }
 
         a {
@@ -121,12 +121,12 @@
 
         &:hover {
           /** To add border on hover uncomment this, uncomment 22px line height above and reduce socials container margin right from 40px to 30px */
-          // border-bottom: 3px solid $pale-gold;
-          color: $pale-gold;
+          // border-bottom: 3px solid $primary;
+          color: $primary;
         }
 
         &.active {
-          color: $pale-gold;
+          color: $primary;
         }
 
         a {

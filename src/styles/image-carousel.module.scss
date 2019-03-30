@@ -1,11 +1,11 @@
 @import "variables";
+@import "mixins";
 
 .image-carousel {
 }
 
-.image-container {
-  max-height: 800px;
-  height: calc(100vh - 120px);
+.hero-image-container {
+  @include hero-image-container;
 }
 
 .image {

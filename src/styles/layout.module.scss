@@ -26,7 +26,7 @@
     opacity: 1;
 
     span {
-      background-color: $pale-gold;
+      background-color: $primary;
     }
   }
 }
@@ -47,21 +47,21 @@
   &.active {
     .top {
       transform: translateY(9px) translateX(0) rotate(45deg);
-      background-color: $pale-gold;
+      background-color: $primary;
     }
     .middle {
       opacity: 0;
-      background-color: $pale-gold;
+      background-color: $primary;
     }
 
     .bottom {
       transform: translateY(-9px) translateX(0) rotate(-45deg);
-      background-color: $pale-gold;
+      background-color: $primary;
     }
   }
 
   span {
-    background-color: $pale-gold;
+    background-color: $primary;
     border: none;
     height: 2px;
     width: 100%;

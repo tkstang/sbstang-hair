@@ -63,10 +63,10 @@
             .icon {
               &:hover {
                 &.facebook {
-                  color: $pale-gold;
+                  color: $primary;
                 }
                 &.instagram {
-                  color: $pale-gold;
+                  color: $primary;
                 }
               }
             }
@@ -82,10 +82,10 @@
             }
           }
           a {
-            color: $pale-gold;
+            color: $primary;
 
             .icon {
-              color: $pale-gold;
+              color: $primary;
             }
           }
         }

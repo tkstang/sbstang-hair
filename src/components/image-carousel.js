@@ -11,7 +11,7 @@ const ImageCarousel = ({ imageLinks, autoPlay }) => {
       {
         imageLinks.map((imageLink, i) => {
           return (
-            <div className={styles.imageContainer} key={`image${i}`}>
+            <div className={styles.heroImageContainer} key={`image${i}`}>
               <img className={styles.image} src={imageLink} alt={'hero'}/>
             </div>
           )

@@ -10,7 +10,7 @@
   .section-line {
     height: 1px;
     width: 100px;
-    border: 3px solid $pale-gold;
+    border: 3px solid $primary;
     margin: 10px auto 60px;
   }
 }
@@ -21,6 +21,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+@mixin hero-container() {
+  width: 100%;
+  max-height: 920px;
+  height: 100vh;
+  position: relative;
+
+  @include lg {
+    width: calc(100% - 140px);
+  }
+}
+
+@mixin hero-image-container() {
+  max-height: 800px;
+  height: calc(100vh - 120px);
 }
 
 

@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixins";
+
+.about-section {
+
+  .hero-container {
+    @include hero-container;
+  }
+
+  .hero-image-container {
+    @include hero-image-container;
+
+    .hero-image {
+      height: 100%;
+    }
+  }
+}

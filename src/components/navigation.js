@@ -38,13 +38,13 @@ const Navigation = ({ mobileNavActive, mobile }) => {
     }, [])
   });
 
-  const getFlexBasisStyle = (linkName) => {
-    const linkWidth = links[linkName].width[0];
-    console.log(linkName, linkWidth + 40);
-    return {
-      flexBasis: linkWidth + 40
-    }
-  }
+  // const getFlexBasisStyle = (linkName) => {
+  //   const linkWidth = links[linkName].width[0];
+  //   console.log(linkName, linkWidth + 40);
+  //   return {
+  //     flexBasis: linkWidth + 40
+  //   }
+  // }
 
   // Once styling is set static flex basis can be used and flexBasisStyle function/use effect can be removed as well as refs for links
 
