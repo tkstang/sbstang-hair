@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Image from 'gatsby-image'
 
 import wedding1 from "../images/leal-wedding-01.jpg"
@@ -17,21 +17,27 @@ import { graphql } from 'gatsby'
 import { FaInstagram } from "react-icons/fa"
 
 const IndexPage = ({ data }) => {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true);
+  })
   const instaPosts = data.allInstagramContent.edges.map(i => i.node);
 
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div className={styles.heroContainer}>
-        <ImageCarousel
-          autoPlay={true}
-          imageLinks={[
-            wedding1,
-            image2,
-            image3,
-            image7,
-          ]}
-        />
+        {mounted && (
+          <ImageCarousel
+            autoPlay={true}
+            imageLinks={[
+              wedding1,
+              image2,
+              image3,
+              image7,
+            ]}
+          />
+        )}
         <HeroContent buttonText={'New Clients'}
           buttonLink={'/new-clients'}
           text={'Great hair doesn\'t happen by chance.  It happens by appointment.'}
