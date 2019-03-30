@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { Media } from 'react-breakpoints'
 
 import Navigation from "components/navigation"
 import Footer from "components/footer"
 import styles from "styles/layout.module.scss"
+
+const { Media = null } = typeof window !== `undefined` ? require('react-media') : { Media: null }
 
 const Layout = ({ children }) => {
   const [navActive, toggleNavState] = useState(false);
@@ -26,9 +27,9 @@ const Layout = ({ children }) => {
         <>
           <div className={styles.layoutContainer}>
             <div className={styles.navContainer}>
-              <Media>
-                {({ breakpoints, currentBreakpoint }) => {
-                  if (breakpoints[currentBreakpoint] < breakpoints.lg) {
+              {Media && <Media query="(max-width: 991px)">
+                {({ matches }) => {
+                  if (matches) {
                     setMobile(true);
 
                     return (
@@ -45,7 +46,7 @@ const Layout = ({ children }) => {
                     setMobile(false);
                   }
                 }}
-              </Media>
+              </Media>}
               <div className={`${styles.navigation} ${navActive ? styles.open : ''}`}>
                 <Navigation mobileNavActive={navActive} mobile={mobile} />
               </div>
