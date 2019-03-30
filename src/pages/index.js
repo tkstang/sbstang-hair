@@ -17,7 +17,6 @@ import { graphql } from 'gatsby'
 import { FaInstagram } from "react-icons/fa"
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const instaPosts = data.allInstagramContent.edges.map(i => i.node);
 
   return (
@@ -46,7 +45,6 @@ const IndexPage = ({ data }) => {
           <div className={styles.imageContainer}>
             {
               instaPosts.slice(0,8).map((post, i) => {
-                console.log(post.localImage)
                 return (
                   post.localImage ? <Image className={styles.instaImage} fluid={post.localImage.childImageSharp.fluid} key={i} />  : <div></div>
                 )

@@ -46,14 +46,14 @@ module.exports = {
         access_token: "11857677.1677ed0.2a1c808a3ec3471dbfabe78d864da2e8"
       }
     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `sbstanghair`,
-        access_token: "11857677.1677ed0.2a1c808a3ec3471dbfabe78d864da2e8",
-        instagram_id: "11857677",
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     username: `sbstanghair`,
+    //     access_token: "11857677.1677ed0.2a1c808a3ec3471dbfabe78d864da2e8",
+    //     instagram_id: "11857677",
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
