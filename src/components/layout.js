@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import Media from "react-media"
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import Media from 'react-media'
 
-import Navigation from "components/navigation"
-import Footer from "components/footer"
-import styles from "styles/layout.module.scss"
+import Navigation from 'components/navigation'
+import Footer from 'components/footer'
+import styles from 'styles/layout.module.scss'
 
 const Layout = ({ children }) => {
   const [navActive, toggleNavState] = useState(false);
@@ -32,7 +32,6 @@ const Layout = ({ children }) => {
             <div className={styles.navContainer}>
               <Media query="(max-width: 991px)">
                 {(matches) => {
-                  console.log(matches);
                   if (mounted) {
                     if (matches) {
                       setMobile(true);

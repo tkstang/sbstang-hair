@@ -1,10 +1,6 @@
 @import "variables";
 @import "mixins";
 
-.hero-container {
-  @include hero-container;
-}
-
 .content-container {
   @include content-container;
 }

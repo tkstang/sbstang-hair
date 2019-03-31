@@ -8,8 +8,10 @@
   padding: 8px ;
   border: none;
 
-  &.carousel {
+  &.hero {
     width: calc(100vw - 140px);
+    min-width: 250px;
+    max-width: 440px;
 
     @include md {
       width: 250px;

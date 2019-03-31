@@ -23,19 +23,8 @@
   align-items: center;
 }
 
-@mixin hero-container() {
-  width: 100%;
-  max-height: 920px;
-  height: 100vh;
-  position: relative;
-
-  @include lg {
-    width: calc(100% - 140px);
-  }
-}
-
 @mixin hero-image-container() {
-  max-height: 800px;
+  max-height: 820px;
   height: calc(100vh - 120px);
 }
 

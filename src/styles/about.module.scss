@@ -7,18 +7,6 @@
     @include section-header;
   }
 
-  .hero-container {
-    @include hero-container;
-  }
-
-  .hero-image-container {
-    @include hero-image-container;
-
-    .hero-image {
-      height: 100%;
-    }
-  }
-
   .content-container {
     text-align: center;
     font-size: 28px;

@@ -1,8 +1,28 @@
 @import "variables";
 @import "mixins";
 
+.hero-container {
+  width: 100%;
+  max-height: 920px;
+  height: 100vh;
+  position: relative;
+
+  @include lg {
+    width: calc(100% - 140px);
+  }
+}
+
+.hero-image-container {
+  @include hero-image-container;
+
+  .hero-image {
+    height: 100%;
+  }
+}
+
 .hero-content {
   width: calc(100vw - 40px);
+  max-width: 600px;
   padding: 20px 30px 40px;
   background-color: $white;
   position: absolute;
@@ -19,13 +39,13 @@
   @include md {
     padding: 40px 65px;
     width: 500px;
-
-    .content {
-      font-size: 28px;
-    }
   }
 
   @include lg {
     width: 600px;
+
+    .content {
+      font-size: 28px;
+    }
   }
 }
