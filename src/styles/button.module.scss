@@ -10,6 +10,8 @@
 
   &.hero {
     width: calc(100vw - 140px);
+    min-width: 250px;
+    max-width: 440px;
 
     @include md {
       width: 250px;
