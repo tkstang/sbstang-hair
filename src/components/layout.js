@@ -23,10 +23,12 @@ const Layout = ({ children }) => {
     return () => window.removeEventListener('resize', handleResize);
   });
 
+  const getLogoClass = () => !mobile ? '' : navActive ? styles.hide : styles.show;
+
   return (
     <div className={styles.layoutContainer} style={{ height: height }}>
       <Link to="/">
-        <div className={styles.logo}>
+        <div className={`${styles.logo} ${getLogoClass()}`}>
           <div className={styles.logoText}>Samantha</div>
           <div className={styles.logoLine} />
           <div className={styles.logoText}>Stang</div>
