@@ -29,7 +29,7 @@ const Hero = ({ text, buttonText, buttonLink, image }) => {
         </div>
       )}
       {!image && (
-        <ImageCarousel/>
+        <ImageCarousel height={height}/>
       )}
       <div className={styles.heroContent}>
         <div className={styles.content}>
