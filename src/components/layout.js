@@ -11,22 +11,15 @@ const Layout = ({ children }) => {
   const [navActive, toggleNavState] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [height, setHeight] = useState('100vh');
 
   useEffect(() => {
     setMounted(true);
-
-    const handleResize = () => {
-      window.innnerHeight >= 820 ? setHeight('100vh') : setHeight(window.innerHeight);
-    }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   });
 
   const getLogoClass = () => !mobile ? '' : navActive ? styles.hide : styles.show;
 
   return (
-    <div className={styles.layoutContainer} style={{ height: height }}>
+    <div className={styles.layoutContainer}>
       <Link to="/">
         <div className={`${styles.logo} ${getLogoClass()}`}>
           <div className={styles.logoText}>Samantha</div>
