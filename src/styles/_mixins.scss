@@ -24,8 +24,12 @@
 }
 
 @mixin hero-image-container() {
-  // max-height: 820px;
-  height: calc(100% - 120px);
+  height: calc(100vh - 200px);
+
+  @include md {
+    margin-bottom: 0;
+    height: calc(100vh - 120px);
+  }
 }
 
 

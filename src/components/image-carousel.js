@@ -10,7 +10,7 @@ import image2 from "../images/umbrella-2.jpg"
 import image3 from "../images/umbrella-3.jpg"
 import image7 from "../images/umbrella-7.jpg"
 
-const ImageCarousel = ({ height }) => {
+const ImageCarousel = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ImageCarousel = ({ height }) => {
       {
         [wedding1, image2, image3, image7].map((image, i) => {
           return (
-            <div className={styles.heroImageContainer} style={{ height: height }} key={`image${i}`}>
+            <div className={styles.heroImageContainer} key={`image${i}`}>
               <img className={styles.image} src={image} alt={'hero'}/>
             </div>
           )
@@ -31,14 +31,6 @@ const ImageCarousel = ({ height }) => {
       }
     </Carousel>
   )
-}
-
-ImageCarousel.propTypes = {
-  height: PropTypes.string
-}
-
-ImageCarousel.defaultProps = {
-  height: `calc(100vh - 120px)`
 }
 
 
