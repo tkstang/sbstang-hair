@@ -7,20 +7,20 @@ import Button from 'components/button'
 import ImageCarousel from 'components/image-carousel'
 
 const Hero = ({ text, buttonText, buttonLink, image }) => {
-  const [height, setHeight] = useState(`calc(100vh - 120px)`);
+  const [height, setHeight] = useState('100vh');
 
   useEffect(() => {
     const handleResize = () => {
-      window.innnerHeight >= 820 ? setHeight(`calc(100vh - 120px)`) : setHeight(window.innerHeight - 120);
+      window.innnerHeight >= 820 ? setHeight('100vh') : setHeight(window.innerHeight);
     }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   });
 
   return (
-    <div className={styles.heroContainer}>
+    <div className={styles.heroContainer} style={{ height: height }}>
       {image && (
-        <div className={styles.heroImageContainer} style={{ height: height }}>
+        <div className={styles.heroImageContainer}>
           <Image
             className={styles.heroImage}
             fluid={image.childImageSharp.fluid}
@@ -29,7 +29,7 @@ const Hero = ({ text, buttonText, buttonLink, image }) => {
         </div>
       )}
       {!image && (
-        <ImageCarousel height={height}/>
+        <ImageCarousel/>
       )}
       <div className={styles.heroContent}>
         <div className={styles.content}>
