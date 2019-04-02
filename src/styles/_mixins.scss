@@ -24,7 +24,7 @@
 }
 
 @mixin hero-image-container() {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 220px);
 
   @include md {
     height: calc(100vh - 120px);
