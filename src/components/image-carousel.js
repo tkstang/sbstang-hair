@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Carousel } from 'react-responsive-carousel'
-import PropTypes from 'prop-types'
 import styles from "styles/image-carousel.module.scss"
 import "styles/carousel.scss"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
