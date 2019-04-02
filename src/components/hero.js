@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'gatsby-image'
 import PropTypes from 'prop-types'
 
@@ -7,18 +7,9 @@ import Button from 'components/button'
 import ImageCarousel from 'components/image-carousel'
 
 const Hero = ({ text, buttonText, buttonLink, image }) => {
-  const [height, setHeight] = useState('100vh');
-
-  useEffect(() => {
-    const handleResize = () => {
-      window.innnerHeight >= 820 ? setHeight('100vh') : setHeight(window.innerHeight);
-    }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  });
 
   return (
-    <div className={styles.heroContainer} style={{ height: height }}>
+    <div className={styles.heroContainer}>
       {image && (
         <div className={styles.heroImageContainer}>
           <Image
