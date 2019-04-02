@@ -9,21 +9,99 @@
       margin-bottom: 30px;
     }
   }
-
+  max-width: 80%;
   text-align: center;
   font-size: 28px;
   font-weight: 400;
-  width: 800px;
-  max-width: 80%;
   margin: 140px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a:link, a:visited {
+    color: $primary-10;
+    font-weight: 500;
+    text-decoration: none;
+  }
 
   .booking-section {
-    font-size: 12px;
+    max-width: 600px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .appointment-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 40px;
+
+    .appointment-step {
+      flex: 1 0 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .policy-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 20px;
+    max-width: 700px;
+
+    .policy {
+      &:first-child {
+        margin-bottom: 40px;
+      }
+
+      .policy-header {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+    }
+
   }
 
   @include md {
+    max-width: 70%;
+
     .booking-section {
+      font-size: 16px;
+    }
+
+    .appointment-section {
+      font-size: 15px;
+    }
+  }
+
+  @include lg {
+    max-width: 100%;
+    padding: 0 120px;
+
+    .appointment-section {
+      margin-bottom: 0;
+
+      .appointment-step {
+        flex: 1 0 33.33%;
+        padding: 0 20px;
+      }
+    }
+
+    .policy-section {
       font-size: 14px;
+      margin-top: 30px;
+
+      .policy {
+        .policy-header {
+          font-size: 15px;
+        }
+      }
     }
   }
 }
