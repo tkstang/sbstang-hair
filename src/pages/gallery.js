@@ -10,21 +10,24 @@ const Gallery = ({ data }) => {
   // To Do: Add more interactivity with posts? show comments, tags, etc?
 
   return (
-    <Layout>
+    <Layout stickyFooter={true}>
       {/** To Do: Improve SEO */}
       <SEO title="Gallery" />
       <div className={styles.gallerySection}>
-        <div className={styles.galleryContainer}>
-          {
-            instaPosts.map((post, i) => {
-              return (
-                post.localImage ?
-                  <Image className={styles.instaImage} key={i} fluid={post.localImage.childImageSharp.fluid}/>
-                  : null
-              )
-            })
-          }
+        <div className={styles.outerContainer}>
+          <div className={styles.galleryContainer}>
+            {
+              instaPosts.map((post, i) => {
+                return (
+                  post.localImage ?
+                    <Image className={styles.instaImage} key={i} fluid={post.localImage.childImageSharp.fluid}/>
+                    : null
+                )
+              })
+            }
+          </div>
         </div>
+        <div className={styles.footBlock}></div>
       </div>
     </Layout>
   )

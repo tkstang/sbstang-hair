@@ -2,16 +2,27 @@
 @import "mixins";
 
 .gallery-section {
-  height: calc(100vh - 103px);
+  padding-top: 140px;
+  height: 100vh;
+  // padding-bottom: 143px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .outer-container {
+    flex: 1 0 calc(100% - 136px);
+    overflow-y: scroll;
+  }
+  .footBlock {
+    flex: 1 0 136px;
+  }
   .gallery-container {
-    padding: 60px 10%;
-    // 80px = 60px for top padding plus 20px for 20px margin of top image
-    height: calc(100% - 80px);
+    padding: 0 10%;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: scroll;
     background-color: $white;
 
     .insta-image {
@@ -20,16 +31,87 @@
       height: auto;
       background-color: black;
 
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 60px;
+      }
+
       @include sm {
         flex: 1 0 calc(50% - 40px);
+        max-width: calc(50% - 40px);
       }
 
       @include md {
         flex: 1 0 calc(33.33% - 40px);
+        max-width: calc(33.33% - 40px);
       }
 
       @include xl {
         flex: 1 0 calc(25% - 40px);
+        max-width: calc(25% - 40px);
+      }
+    }
+  }
+
+  @include sm {
+    // height: calc(100vh - 230px);
+    // overflow-y: scroll;
+    height: 100vh;
+    padding-bottom: 103px;
+    // margin-bottom: 103px;
+    .footBlock {
+      flex: 1 0 103px;
+    }
+
+    .gallery-container {
+      flex: 1 0 auto;
+      justify-content: flex-start;
+      .insta-image {
+        &:first-child, &:nth-child(2) {
+          margin-top: 0;
+        }
+        &:last-child, &:nth-last-child(2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include md {
+    .gallery-container {
+      .insta-image {
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-top: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    .gallery-container {
+      .insta-image {
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-top: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:nth-last-child(4) {
+          margin-bottom: 0;
+        }
       }
     }
   }
