@@ -3,19 +3,18 @@
 
 .gallery-section {
   padding-top: 140px;
-  height: 100vh;
-  // padding-bottom: 143px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
 
   .outer-container {
-    flex: 1 0 calc(100% - 136px);
-    overflow-y: scroll;
+    flex: 1 0 auto;
   }
+
   .footBlock {
-    flex: 1 0 136px;
+    flex: 1 0 0px;
   }
+
   .gallery-container {
     padding: 0 10%;
     flex: 1 0 auto;
@@ -57,13 +56,17 @@
   }
 
   @include sm {
-    // height: calc(100vh - 230px);
-    // overflow-y: scroll;
     height: 100vh;
     padding-bottom: 103px;
-    // margin-bottom: 103px;
+    overflow-y: hidden;
+
     .footBlock {
       flex: 1 0 103px;
+    }
+
+    .outer-container {
+      overflow-y: scroll;
+      flex: 1 0 calc(100% - 136px);
     }
 
     .gallery-container {
