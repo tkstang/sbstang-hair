@@ -30,6 +30,7 @@
 
         &:nth-of-type(2) {
           padding-bottom: 80px;
+          padding-top: 0px;
         }
 
         .pricing-note {
@@ -89,7 +90,7 @@
         .services-container {
           flex-basis: calc(50% - 80px);
           margin: 0 40px;
-          padding-bottom: 40px;
+          padding-bottom: 80px;
           padding-top: 0;
         }
       }
