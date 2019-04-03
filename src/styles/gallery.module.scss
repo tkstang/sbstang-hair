@@ -3,21 +3,22 @@
 
 .gallery-section {
   padding-top: 140px;
-  // height: calc(100% - 103px);
+  height: 100vh;
+  // padding-bottom: 143px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+
   .outer-container {
-    flex: 1 0 calc(100% - 103px);
+    flex: 1 0 calc(100% - 136px);
     overflow-y: scroll;
   }
   .footBlock {
-    flex: 1 0 103px;
+    flex: 1 0 136px;
   }
   .gallery-container {
     padding: 0 10%;
-    // 80px = 60px for top padding plus 20px for 20px margin of top image
-    // height: calc(100% - 80px);
-    flex: 1 0 100%;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -35,7 +36,7 @@
       }
 
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 60px;
       }
 
       @include sm {
@@ -66,7 +67,7 @@
     }
 
     .gallery-container {
-      flex: 1 0 100%;
+      flex: 1 0 auto;
       justify-content: flex-start;
       .insta-image {
         &:first-child, &:nth-child(2) {
