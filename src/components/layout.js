@@ -7,7 +7,7 @@ import Navigation from 'components/navigation'
 import Footer from 'components/footer'
 import styles from 'styles/layout.module.scss'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, stickyFooter }) => {
   const [navActive, toggleNavState] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
       </div>
       <main className={styles.content}>{children}</main>
       <div className={styles.footer}>
-        <Footer />
+        <Footer sticky={stickyFooter}/>
       </div>
     </div>
   )
@@ -68,6 +68,11 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  stickyFooter: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  stickyFooter: false
 }
 
 export default Layout
