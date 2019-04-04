@@ -48,14 +48,24 @@ const NewClients = () => (
           <p>I will also be sure to cover an at home regimen to keep your hair looking its best even after you leave my chair.</p>
         </div>
       </div>
+      <div className={styles.aftercareSection}>
+        <div className={styles.sectionHeader}>
+          After Care
+          <div className={styles.sectionLine} />
+        </div>
+        <p><b>Keratin Treatment:</b> Keratin treatments are a wonderful way to help clients with curlier or frizzier textures, manage and style their hair.  There are some at home tips to follow to make sure you get the most from your service.  It is important to avoid getting the hair wet or damp at all immediately after receiving the treatment as it can affect the desired result.  For Keratin Express treatment you must wait 8 hours and for the Keratin Natural treatment you must wait 72 hours. In the event the hair does get wet during this time period, dry the hair immediately and use a flat iron to smooth the hair.  After the required time has passed you may wash and style your hair as normal.  To ensure the longevity of your treatment it is important to use sulfate free shampoo.  I am happy to recommend products to maintain the best results of your treatment. Swimming in chlorinated water or salt water should be avoided. In the event that you do, be sure to rinse the hair thoroughly after. Keratin Treatments can be such a wonderful change for not only your hair but also your lifestyle so following these helpful tips will allow you to protect and maintain your new texture.
+        </p>
+        <p><b>Extensions:</b> Extensions are life changing and an exciting investment so it is important to know how to care for your new hair properly.  The hair that I source is of the utmost quality and is real human hair. Be sure to use quality products to protect and treat the hair exactly as you would your own natural hair.  Keeping the hair well detangled, particularly near the bonds, is very important. When detangling or styling be mindful not to comb over the bonds or use too much tension when brushing.  Avoid getting styling products near or on the bonds to avoid slipping or weakening of the bonds.  Also, avoid getting chlorinated water or salt water on the bonds. In the event that you do be sure to rinse the hair thoroughly after. Following these tips allows you to fully enjoy your new look and prevent damage to the extensions and your own natural hair.
+        </p>
+      </div>
       <div className={styles.policySection}>
-        <div className={styles.policy}>
+        <div className={styles.policy} id={'cancellation-policy'}>
           <div className={styles.policyHeader}>
             Cancellation Policy
           </div>
           I do the very best that I can to accommodate my clients and their busy schedules and respect that their time is valuable. As my client, I kindly ask that you do the same when booking appointments. If issues come up with the timing of your appointment please allow 24 hours when giving notice to cancel or move appointments to avoid a cancellation fee. My cancellation fee is 50% of the services booked for that day.
         </div>
-        <div className={styles.policy}>
+        <div className={styles.policy} id={'late-policy'}>
           <div className={styles.policyHeader}>
             Late Policy
           </div>

@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+
+.faq {
+  .section-header {
+    @include section-header;
+
+    .section-line {
+      margin-bottom: 40px;
+    }
+  }
+
+  max-width: 80%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 140px auto 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a:link, a:visited {
+    color: $primary-10;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .faq-section {
+      .question {
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+  }
+
+  @include md {
+    max-width: 80%;
+    font-size: 16px;
+  }
+
+  @include lg {
+    width: 70%;
+    max-width: 800px;
+  }
+}

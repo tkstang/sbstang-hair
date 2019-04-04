@@ -45,13 +45,29 @@
     }
   }
 
+  .aftercare-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
   .policy-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 13px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 40px;
     max-width: 700px;
 
     .policy {
@@ -78,6 +94,10 @@
     .appointment-section {
       font-size: 15px;
     }
+
+    .aftercare-section {
+      font-size: 15px;
+    }
   }
 
   @include lg {
@@ -95,7 +115,6 @@
 
     .policy-section {
       font-size: 14px;
-      margin-top: 30px;
 
       .policy {
         .policy-header {
