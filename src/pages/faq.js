@@ -54,13 +54,13 @@ const FAQ = () => (
           What is your cancellation policy?
         </div>
         <p>
-          My cancellation policy can be found here.
+          My cancellation policy can be found <Link to="/new-clients/#cancellation-policy">here</Link>.
         </p>
         <div className={styles.question}>
           What happens if I’m late to my appointment?
         </div>
         <p>
-          Please reference my salon policies here.
+          Please reference my salon policies <Link to="/new-clients/#late-policy">here</Link>.
         </p>
       </div>
     </div>

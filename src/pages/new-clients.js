@@ -59,13 +59,13 @@ const NewClients = () => (
         </p>
       </div>
       <div className={styles.policySection}>
-        <div className={styles.policy}>
+        <div className={styles.policy} id={'cancellation-policy'}>
           <div className={styles.policyHeader}>
             Cancellation Policy
           </div>
           I do the very best that I can to accommodate my clients and their busy schedules and respect that their time is valuable. As my client, I kindly ask that you do the same when booking appointments. If issues come up with the timing of your appointment please allow 24 hours when giving notice to cancel or move appointments to avoid a cancellation fee. My cancellation fee is 50% of the services booked for that day.
         </div>
-        <div className={styles.policy}>
+        <div className={styles.policy} id={'late-policy'}>
           <div className={styles.policyHeader}>
             Late Policy
           </div>
