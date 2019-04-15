@@ -2,10 +2,10 @@ import Typography from "typography";
 
 const typography = new Typography({
   baseFontSize: "13px",
-  bodyFontFamily: ["Montserrat"],
+  bodyFontFamily: ["Lato"],
   googleFonts: [
     {
-      name: 'Montserrat',
+      name: 'Lato',
       styles: [
         '200',
         '300',
