@@ -56,16 +56,14 @@
   }
 
   @include sm {
-    height: 100vh;
     padding-bottom: 103px;
     overflow-y: hidden;
 
     .footBlock {
-      flex: 1 0 103px;
+      // flex: 1 0 103px;
     }
 
     .outer-container {
-      overflow-y: scroll;
       flex: 1 0 calc(100% - 136px);
     }
 
