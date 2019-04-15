@@ -18,7 +18,7 @@ const Gallery = ({ data }) => {
   });
 
   return (
-    <Layout stickyFooter={!mobile}>
+    <Layout>
       <Media query="(max-width: 575px)">
         {(matches) => {
           setMobile(matches && mounted);

@@ -54,27 +54,28 @@ const Navigation = ({ mobileNavActive, mobile }) => {
         <Socials theme={mobile ? 'dark' : 'light'} />
       </div>
       <div className={styles.linksContainer}>
-        <div className={styles.linkItem} style={{ flexBasis: 155 }}>
+        <div className={`${styles.linkItem} ${styles.newClients}`} style={{ flexBasis: 144 }}>
           <Link ref={links.clientLink.ref} to="/new-clients" className={styles.link}
             activeClassName={styles.active}>New Clients</Link>
+          <span className={styles.underline} />
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 121 }}>
+        <div className={styles.linkItem} style={{ flexBasis: 113 }}>
           <Link ref={links.servicesLink.ref} to="/services" className={styles.link}
             activeClassName={styles.active}>Services</Link>
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 116 }}>
+        <div className={styles.linkItem} style={{ flexBasis: 109 }}>
           <Link ref={links.galleryLink.ref} to="/gallery" className={styles.link}
             activeClassName={styles.active}>Gallery</Link>
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 99 }}>
+        <div className={styles.linkItem} style={{ flexBasis: 95 }}>
           <Link ref={links.aboutLink.ref} to="/about" className={styles.link}
             activeClassName={styles.active}>About</Link>
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 119 }}>
+        <div className={styles.linkItem} style={{ flexBasis: 115 }}>
           <Link ref={links.contactLink.ref} to="/contact" className={styles.link}
             activeClassName={styles.active}>Contact</Link>
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 75 }}>
+        <div className={styles.linkItem} style={{ flexBasis: 71 }}>
           <Link ref={links.faqLink.ref} to="/faq" className={styles.link}
             activeClassName={styles.active}>FAQ</Link>
         </div>
@@ -82,5 +83,30 @@ const Navigation = ({ mobileNavActive, mobile }) => {
     </div>
   )
 }
+
+{/* <div className={styles.linkItem} style={getFlexBasisStyle('clientLink')}>
+<Link ref={links.clientLink.ref} to="/new-clients" className={styles.link}
+  activeClassName={styles.active}>New Clients</Link>
+</div>
+<div className={styles.linkItem} style={getFlexBasisStyle('servicesLink')}>
+<Link ref={links.servicesLink.ref} to="/services" className={styles.link}
+  activeClassName={styles.active}>Services</Link>
+</div>
+<div className={styles.linkItem} style={getFlexBasisStyle('galleryLink')}>
+<Link ref={links.galleryLink.ref} to="/gallery" className={styles.link}
+  activeClassName={styles.active}>Gallery</Link>
+</div>
+<div className={styles.linkItem} style={getFlexBasisStyle('aboutLink')}>
+<Link ref={links.aboutLink.ref} to="/about" className={styles.link}
+  activeClassName={styles.active}>About</Link>
+</div>
+<div className={styles.linkItem} style={getFlexBasisStyle('contactLink')}>
+<Link ref={links.contactLink.ref} to="/contact" className={styles.link}
+  activeClassName={styles.active}>Contact</Link>
+</div>
+<div className={styles.linkItem} style={getFlexBasisStyle('faqLink')}>
+<Link ref={links.faqLink.ref} to="/faq" className={styles.link}
+  activeClassName={styles.active}>FAQ</Link>
+</div> */}
 
 export default Navigation

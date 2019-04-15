@@ -105,23 +105,35 @@
         &:first-child {
           flex-basis: 124px;
         }
+
+        &.new-clients {
+          position: relative;
+          .underline {
+            position: absolute;
+            right: 80px;
+            top: 51px;
+            transform: rotate(90deg) translateY(-70px);
+            height: 3px;
+            background-color: $primary;
+            width: 108px;
+            border: 1px solid $primary;
+          }
+        }
+
       }
 
       .link {
         float: left;
-        transform: rotate(90deg) translateY(-78px);
+        transform: rotate(90deg) translateY(-70px);
         transform-origin: left top 0;
         color: $charcoal;
         font-size: 16px;
         font-weight: 500;
-        // line-height: 22px;
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
 
         &:hover {
-          /** To add border on hover uncomment this, uncomment 22px line height above and reduce socials container margin right from 40px to 30px */
-          // border-bottom: 3px solid $primary;
           color: $primary;
         }
 
