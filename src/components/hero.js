@@ -7,7 +7,6 @@ import Button from 'components/button'
 import ImageCarousel from 'components/image-carousel'
 
 const Hero = ({ text, contentSize, buttonText, buttonLink, image }) => {
-  console.log(contentSize);
   return (
     <div className={styles.heroContainer}>
       {image && (

@@ -2,17 +2,9 @@ $black: #000000;
 $white: #FFFFFF;
 $charcoal: #343437;
 
-// Original pale gold: #EEE8AA;
-// Peach F7D59A;
-$primary: #F7D59A;
+$primary: 	#EFA69F;
 $primary-10: darken($primary, 10%);
 $primary-20: darken($primary, 20%);
-
-
-// $primary-2: #ECE9C9; more light bronzish
-
-// $bronze: #B1AB7C;
-// $rose-gold: #EFC5BC;
 
 // Screen size variables
 $screen-xs-min: 425px;  // Tiny phones

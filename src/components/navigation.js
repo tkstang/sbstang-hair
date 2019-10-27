@@ -4,7 +4,6 @@ import Socials from 'components/socials'
 import styles from 'styles/navigation.module.scss'
 
 const Navigation = ({ mobileNavActive, mobile, location }) => {
-  console.log(location);
   const links = {
     clientLink: {
       ref: useRef(null),
