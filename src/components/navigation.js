@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 import Socials from 'components/socials'
 import styles from 'styles/navigation.module.scss'
 
-const Navigation = ({ mobileNavActive, mobile }) => {
+const Navigation = ({ mobileNavActive, mobile, location }) => {
+  console.log(location);
   const links = {
     clientLink: {
       ref: useRef(null),
@@ -57,27 +58,32 @@ const Navigation = ({ mobileNavActive, mobile }) => {
         <div className={`${styles.linkItem} ${styles.newClients}`} style={{ flexBasis: 144 }}>
           <Link ref={links.clientLink.ref} to="/new-clients" className={styles.link}
             activeClassName={styles.active}>New Clients</Link>
-          <span className={styles.underline} />
+          {location.pathname.includes('new-clients') && <span className={styles.underline} />}
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 113 }}>
+        <div className={`${styles.linkItem} ${styles.services}`} style={{ flexBasis: 113 }}>
           <Link ref={links.servicesLink.ref} to="/services" className={styles.link}
             activeClassName={styles.active}>Services</Link>
+            {location.pathname.includes('services') && <span className={styles.underline} />}
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 109 }}>
+        <div className={`${styles.linkItem} ${styles.gallery}`} style={{ flexBasis: 109 }}>
           <Link ref={links.galleryLink.ref} to="/gallery" className={styles.link}
             activeClassName={styles.active}>Gallery</Link>
+            {location.pathname.includes('gallery') && <span className={styles.underline} />}
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 95 }}>
+        <div className={`${styles.linkItem} ${styles.about}`} style={{ flexBasis: 95 }}>
           <Link ref={links.aboutLink.ref} to="/about" className={styles.link}
             activeClassName={styles.active}>About</Link>
+            {location.pathname.includes('about') && <span className={styles.underline} />}
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 115 }}>
+        <div className={`${styles.linkItem} ${styles.contact}`} style={{ flexBasis: 115 }}>
           <Link ref={links.contactLink.ref} to="/contact" className={styles.link}
             activeClassName={styles.active}>Contact</Link>
+            {location.pathname.includes('contact') && <span className={styles.underline} />}
         </div>
-        <div className={styles.linkItem} style={{ flexBasis: 71 }}>
+        <div className={`${styles.linkItem} ${styles.faq}`} style={{ flexBasis: 71 }}>
           <Link ref={links.faqLink.ref} to="/faq" className={styles.link}
             activeClassName={styles.active}>FAQ</Link>
+            {location.pathname.includes('faq') && <span className={styles.underline} />}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { Location } from '@reach/router'
 import Media from 'react-media'
 
 import Navigation from 'components/navigation'
@@ -55,7 +56,12 @@ const Layout = ({ children, stickyFooter }) => {
           }}
         </Media>
         <div className={`${styles.navigation} ${navActive ? styles.open : ''}`}>
-          <Navigation mobileNavActive={navActive} mobile={mobile} />
+          <Location>
+            {({ location }) => (
+              <Navigation mobileNavActive={navActive} mobile={mobile} location={location} />
+            )}
+
+          </Location>
         </div>
       </div>
       <main className={styles.content}>{children}</main>
