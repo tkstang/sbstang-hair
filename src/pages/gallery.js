@@ -15,7 +15,7 @@ const Gallery = ({ data }) => {
 
   useEffect(() => {
     setMounted(true);
-  });
+  }, []);
 
   return (
     <Layout>
