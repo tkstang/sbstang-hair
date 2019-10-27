@@ -12,7 +12,8 @@ const About = ({ data }) => (
     <div className={styles.aboutSection}>
       <Hero image={data.imageOne} buttonText={'Get In Touch'}
         buttonLink={'mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com'}
-        text={`I'm going to make everything around me beautiful.  That will be my life. - Elise De Wolfe`}
+        text={`Hairdressers are a wonderful breed.  You work on-on-one with another human being and the object is to make them feel so much better and to look at themselves with a  twinkle in their eye.`}
+        contentSize={'sm'}
       />
       <div className={styles.contentContainer}>
         <div className={styles.introSection}>
@@ -88,7 +89,7 @@ export default About
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "leal-wedding-01.jpg" }) {
+    imageOne: file(relativePath: { eq: "oct-shoot2-5.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 800) {
           ...GatsbyImageSharpFluid

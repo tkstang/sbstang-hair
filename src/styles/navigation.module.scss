@@ -102,6 +102,17 @@
       .link-item {
         flex: 1 0 100px;
 
+        .underline {
+          position: absolute;
+          right: 80px;
+          top: 51px;
+          transform: rotate(90deg) translateY(-70px);
+          height: 3px;
+          background-color: $primary;
+          width: 108px;
+          border: 1px solid $primary;
+        }
+
         &:first-child {
           flex-basis: 124px;
         }
@@ -117,6 +128,51 @@
             background-color: $primary;
             width: 108px;
             border: 1px solid $primary;
+          }
+        }
+
+        &.services {
+          position: relative;
+          .underline {
+            top: 35px;
+            width: 80px;
+            right: 94px;
+          }
+        }
+
+        &.gallery {
+          position: relative;
+          .underline {
+            top: 33px;
+            width: 78px;
+            right: 95px;
+          }
+        }
+
+        &.about {
+          position: relative;
+          .underline {
+            top: 25px;
+            width: 64px;
+            right: 102px;
+          }
+        }
+
+        &.contact {
+          position: relative;
+          .underline {
+            top: 36px;
+            width: 82px;
+            right: 92px;
+          }
+        }
+
+        &.faq {
+          position: relative;
+          .underline {
+            top: 14px;
+            width: 40px;
+            right: 113px;
           }
         }
 

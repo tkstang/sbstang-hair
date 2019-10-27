@@ -4,16 +4,16 @@ import styles from 'styles/testimonials.module.scss';
 const Testimonials = () => {
   const allReviews = [
     {
-      review: `"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"`,
-      reviewer: 'Name One'
+      review: `"Samantha Stang is a hair genius.  I leave the salon with my hair looking amazing.  I show her pictures of what I want and she makes my hair look better than in the picture I showed her."`,
+      reviewer: 'Erin A.'
     },
     {
-      review: `"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"`,
-      reviewer: 'Name Two'
+      review: `"She is a true perfectionist and I recommend her for any hair service, especially color.  I've been going to her for years, and she has yet to disappoint."`,
+      reviewer: 'Emily B.'
     },
     {
-      review: `"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"`,
-      reviewer: 'Name Three'
+      review: `"I have never met a hair stylist who took so much pride and cair in the perfection of their customer's hair.  I walked out feeling like a million bucks and my hair color looks natural and beautiful."`,
+      reviewer: 'Kaede H.'
     }
   ];
 

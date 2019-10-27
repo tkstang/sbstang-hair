@@ -6,8 +6,7 @@ import styles from 'styles/hero.module.scss'
 import Button from 'components/button'
 import ImageCarousel from 'components/image-carousel'
 
-const Hero = ({ text, buttonText, buttonLink, image }) => {
-
+const Hero = ({ text, contentSize, buttonText, buttonLink, image }) => {
   return (
     <div className={styles.heroContainer}>
       {image && (
@@ -23,7 +22,7 @@ const Hero = ({ text, buttonText, buttonLink, image }) => {
         <ImageCarousel/>
       )}
       <div className={styles.heroContent}>
-        <div className={styles.content}>
+        <div className={`${styles.content} ${contentSize ? styles[contentSize] : ''}`}>
           {text}
         </div>
         <div className={styles.buttonContainer}>
