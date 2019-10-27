@@ -15,7 +15,7 @@ const Layout = ({ children, stickyFooter }) => {
 
   useEffect(() => {
     setMounted(true);
-  });
+  }, []);
 
   const getLogoClass = () => !mobile ? '' : navActive ? styles.hide : styles.show;
 
