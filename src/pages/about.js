@@ -12,7 +12,7 @@ const About = ({ data }) => (
     <div className={styles.aboutSection}>
       <Hero image={data.imageOne} buttonText={'Get In Touch'}
         buttonLink={'mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com'}
-        text={`Hairdressers are a wonderful breed.  You work on-on-one with another human being and the object is to make them feel so much better and to look at themselves with a  twinkle in their eye.`}
+        text={`Hairdressers are a wonderful breed.  You work one-on-one with another human being and the object is to make them feel so much better and to look at themselves with a  twinkle in their eye. - Vidal Sassoon`}
         contentSize={'sm'}
       />
       <div className={styles.contentContainer}>
