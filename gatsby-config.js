@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Samantha Stang · Hair Stylist`,
-    description: `Stylist and Wella Master Color Expert at Umbrella Salon in San Jose, California. Book now for cut, color, styling and makeup.`,
+    description: `Stylist and Color Expert at Umbrella Salon in San Jose, California. Book now for your next cut, color or styling appointment.`,
     url: `https://www.sbstanghair.com`,
     image: `/images/seo-image.jpg`,
     instagramUsername: `sbstanghair`

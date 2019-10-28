@@ -12,7 +12,7 @@ const Testimonials = () => {
       reviewer: 'Emily B.'
     },
     {
-      review: `"I have never met a hair stylist who took so much pride and cair in the perfection of their customer's hair.  I walked out feeling like a million bucks and my hair color looks natural and beautiful."`,
+      review: `"I have never met a hair stylist who took so much pride and care in the perfection of their customer's hair.  I walked out feeling like a million bucks and my hair color looks natural and beautiful."`,
       reviewer: 'Kaede H.'
     }
   ];
