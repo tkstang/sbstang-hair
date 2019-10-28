@@ -74,7 +74,7 @@ const Services = () => (
               </div>
               <div className={styles.service}>
                 <li className={styles.serviceName}>Updo</li>
-                <span className={styles.price}>$15+</span>
+                <span className={styles.price}>$175+</span>
               </div>
               <div className={styles.service}>
                 <li className={styles.serviceName}>Blowout</li>

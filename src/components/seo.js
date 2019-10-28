@@ -10,42 +10,50 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ title, description, image, pathname, meta, keywords, lang }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            defaultTitle: title
+            defaultDescription: description
+            siteUrl: url
+            defaultImage: image
+            instagramUsername
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const { defaultTitle, defaultDescription, siteUrl, defaultImage, instagramUsername } = site.siteMetadata;
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname || "/"}`,
+  }
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={seo.title}
+      titleTemplate={`%s | ${defaultTitle}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: seo.description,
         },
         {
           property: `og:title`,
-          content: title,
+          content: defaultTitle
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: seo.description,
         },
         {
           property: `og:type`,
@@ -55,18 +63,24 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:card`,
           content: `summary`,
         },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
+        // Need to add author info
+        // {
+        //   name: `twitter:creator`,
+        //   content: site.siteMetadata.author,
+        // },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: seo.description,
         },
+        {
+          name: `twitter:image`,
+          content: seo.image,
+        },
+        // TODO: Add instagram and facebook info
       ]
         .concat(
           keywords.length > 0

@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Samantha Stang · Hair Stylist`,
+    description: `Stylist and Wella Master Color Expert at Umbrella Salon in San Jose, California. Book now for cut, color, styling and makeup.`,
+    url: `https://www.sbstanghair.com`,
+    image: `/images/seo-image.jpg`,
+    instagramUsername: `sbstanghair`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
