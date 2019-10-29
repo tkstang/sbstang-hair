@@ -39,7 +39,7 @@ const Contact = () => (
         </div>
         <div className={styles.contactItem}>
           <div className={styles.contactLink}>
-            <a href="https://maps.google.com/?q=2 N Market St #100, San Jose, CA 95113" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.google.com/?q=Umbrella Salon, 2 N Market St #100, San Jose, CA 95113" target="_blank" rel="noopener noreferrer">
                 <FaCut className={styles.icon} />
                 <span>2 N Market St #100</span>
                 <span>San Jose, CA 95113</span>
