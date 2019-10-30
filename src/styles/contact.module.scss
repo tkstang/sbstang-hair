@@ -61,6 +61,7 @@
 
           a {
             .icon {
+
               &:hover {
                 &.facebook {
                   color: $primary;
@@ -78,14 +79,17 @@
             a {
               .icon {
                 color: $black;
+                transition: color 0.2s linear;
               }
             }
           }
           a {
             color: $primary;
+            transition: color 0.2s linear;
 
             .icon {
               color: $primary;
+              transition: color 0.2s linear;
             }
           }
         }

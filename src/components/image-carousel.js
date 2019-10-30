@@ -35,7 +35,7 @@ const ImageCarousel = () => {
         }
       `}
       render={data => mounted && (
-        <Carousel className={styles.imageCarousel} showArrows={false} showThumbs={false} showStatus={false} autoPlay={true} infiniteLoop>
+        <Carousel className={styles.imageCarousel} showArrows={false} showThumbs={false} interval={8000} transitionTime={2000} showStatus={false} autoPlay={true} infiniteLoop>
           {
             data.allFile.edges.map((image, i) => {
               const { fluid, fluid: { originalName } } = image.node.childImageSharp;

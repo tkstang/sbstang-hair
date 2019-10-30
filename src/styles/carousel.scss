@@ -2,6 +2,16 @@
 
 // Style overrides for carousel library
 .carousel {
+  .slide {
+    opacity: 0;
+    transition: opacity 3.2s ease-in-out;
+
+    &.selected  {
+      opacity: 1;
+      transition: opacity 2.2s ease-in;
+    }
+  }
+
   .control-dots {
     left: 0;
     text-align: left;
@@ -9,9 +19,6 @@
     margin: 0 !important;
     bottom: calc(50% - 36px) !important;
     width: 20px !important;
-
-    .dot {
-    }
 
     @include md {
       padding-bottom: 0;

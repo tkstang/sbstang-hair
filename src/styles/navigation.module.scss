@@ -40,6 +40,7 @@
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
+        transition: color 0.2s linear;
 
         &:hover {
           color: $primary;
@@ -188,6 +189,7 @@
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
+        transition: color 0.2s linear;
 
         &:hover {
           color: $primary;
