@@ -7,6 +7,7 @@
   background-color: $primary;
   padding: 8px ;
   border: none;
+  transition: background-color 0.2s linear;
 
   &.hero {
     width: calc(100vw - 140px);
@@ -20,6 +21,7 @@
 
   &:hover {
     cursor: pointer;
+    background-color: $primary-10;
   }
 
   .interior {

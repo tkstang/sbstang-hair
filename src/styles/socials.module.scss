@@ -9,6 +9,10 @@
   font-size: 18px;
   padding-top: 8px;
 
+  .icon {
+    transition: color 0.2s linear;
+  }
+
   a {
     margin: 0 0;
     z-index: 1;
@@ -21,7 +25,6 @@
       color: $white;
 
       &:hover {
-        // To do use darker gold on white background
         color: $primary;
       }
     }
