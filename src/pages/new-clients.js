@@ -6,7 +6,7 @@ import styles from 'styles/new-clients.module.scss'
 
 const NewClients = () => (
   <Layout>
-    {/** To Do: Improve SEO */}
+    {/** TODO: Improve SEO */}
     <SEO title="New Clients" />
     <div className={styles.newClients}>
       <div className={styles.bookingSection}>

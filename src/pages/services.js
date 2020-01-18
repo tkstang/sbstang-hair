@@ -5,7 +5,7 @@ import styles from "styles/services.module.scss"
 
 const Services = () => (
   <Layout>
-    {/** To Do: Improve SEO */}
+    {/** TODO: Improve SEO */}
     <SEO title="Services" />
     <div className={styles.servicesSection}>
       <div className={styles.pricingSection}>

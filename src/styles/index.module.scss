@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+body {
+  background-color: $off-white;
+}
+
 .content-container {
   @include content-container;
 }
