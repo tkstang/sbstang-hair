@@ -1,5 +1,6 @@
 import React from 'react'
-import styles from 'styles/testimonials.module.scss';
+import SectionHeader from 'components/section-header'
+import styles from 'styles/testimonials.module.scss'
 
 const Testimonials = () => {
   const allReviews = [
@@ -22,10 +23,7 @@ const Testimonials = () => {
 
   return (
     <div>
-      <div className={styles.sectionHeader}>
-        Testimonials
-        <div className={styles.sectionLine} />
-      </div>
+      <SectionHeader text={'testimonials'} />
       <div className={styles.testimonialContainer}>
         {
           testimonials.map((testimonial, i) => {

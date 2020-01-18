@@ -6,6 +6,7 @@ import Layout from 'components/layout'
 import SEO from 'components/seo'
 import Hero from 'components/hero'
 import Testimonials from 'components/testimonials'
+import SectionHeader from 'components/section-header'
 import Button from 'components/button'
 import { graphql } from 'gatsby'
 import { FaInstagram } from 'react-icons/fa'
@@ -43,10 +44,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className={styles.bookingSection}>
-          <div className={styles.sectionHeader}>
-            Book An Appointment
-            <div className={styles.sectionLine} />
-          </div>
+          <SectionHeader text={'book an appointment'} />
           Click the button below to visit the booking page for Umbrella Salon.  Simply select my name and your desired service to browse availability and book an appointment!
           <div className={styles.buttonContainer}>
             <Button width={'250px'} buttonText={'Book Now'} buttonLink={'https://www.umbrellasalon.com/book-online/'} />

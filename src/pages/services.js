@@ -1,8 +1,8 @@
-import React from "react"
-import Layout from "components/layout"
-import SEO from "components/seo"
-import SectionHeader from "components/section-header"
-import styles from "styles/services.module.scss"
+import React from 'react'
+import Layout from 'components/layout'
+import SEO from 'components/seo'
+import SectionHeader from 'components/section-header'
+import styles from 'styles/services.module.scss'
 
 const Services = () => (
   <Layout>

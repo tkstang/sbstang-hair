@@ -4,7 +4,7 @@
 .section-header {
   font-size: 20px;
   line-height: 39px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-family: titling-gothic-fb, sans-serif;
   font-weight: 300;
   width: fit-content;
@@ -29,12 +29,12 @@
     position: relative;
     margin: 0 12px -19px;
     z-index: 100;
+    color: $charcoal;
   }
 
   @include lg {
     font-size: 30px;
     line-height: 39px;
-    letter-spacing: 2px;
 
     &.leftlg {
       margin: 0 0 40px;
