@@ -9,10 +9,6 @@ body {
   @include content-container;
 }
 
-.section-header {
-  @include section-header;
-}
-
 .booking-section {
   text-align: center;
   font-size: 18px;
