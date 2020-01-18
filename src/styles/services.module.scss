@@ -7,10 +7,6 @@
   justify-content: flex-start;
   align-items: center;
 
-  .section-header {
-    @include section-header;
-  }
-
   .pricing-section {
     width: 100%;
 
@@ -24,7 +20,7 @@
         display: flex;
         flex-direction: column;
         flex: 1 0 100%;
-        background-color: #F6F6F6;
+        background-color: $white;
         position: relative;
         padding-top: 80px;
 
@@ -36,16 +32,22 @@
         .pricing-note {
           position: absolute;
           bottom: 0;
-          font-size: 14px;
           margin: 5px 0;
-          text-align: center;
-          width: 100%;
+          padding-left: 30px;
+
+          font-style: italic;
+          color: $muted;
+          letter-spacing: 0.5px;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 24px;
         }
 
         .services-item {
           display: flex;
           flex-direction: column;
           flex: 1 0 auto;
+          margin-top: 80px;
 
           .section-header {
             margin-top: 80px;
@@ -61,6 +63,7 @@
             display: flex;
             flex-direction: row;
             font-size: 16px;
+            letter-spacing: 1px;
             padding: 6px 30px;
 
             .service-name {
@@ -71,6 +74,19 @@
               flex: 1 0 auto;
               text-align: right;
               color: $primary;
+
+              &.muted {
+                font-style: italic;
+                color: $muted;
+                letter-spacing: 0.5px;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 28px;
+
+                @include lg {
+                  line-height: 26px;
+                }
+              }
             }
           }
         }
@@ -81,17 +97,24 @@
   @include lg {
 
     .pricing-section {
-      padding: 140px 8% 60px;
+      padding: 140px 8%;
 
       .pricing-container {
         flex: 1 0 100%;
 
-        // To Do: Make first services items of services container fixed height so second items start at even point
         .services-container {
           flex-basis: calc(50% - 80px);
-          margin: 0 40px;
-          padding-bottom: 80px;
-          padding-top: 0;
+          margin: 0;
+          padding: 0 100px 80px;
+
+          // This makes second section start evenly with lasat section
+          &:first-of-type {
+            .services-item {
+              &:nth-of-type(2) {
+                padding-top: 130px;
+              }
+            }
+          }
         }
       }
     }
@@ -99,7 +122,7 @@
 
   @include xl {
     .pricing-section {
-      padding: 140px 8% 60px;
+      padding: 140px 10%;
       max-width: 1600px;
     }
   }
