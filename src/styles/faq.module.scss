@@ -2,18 +2,12 @@
 @import "mixins";
 
 .faq {
-  .section-header {
-    @include section-header;
-
-    .section-line {
-      margin-bottom: 40px;
-    }
-  }
-
   max-width: 80%;
   text-align: center;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 20px;
   margin: 140px auto 100px;
   display: flex;
   flex-direction: row;
@@ -28,7 +22,7 @@
 
   .faq-section {
       .question {
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 10px;
       }
 
@@ -45,5 +39,6 @@
   @include lg {
     width: 70%;
     max-width: 800px;
+    line-height: 22px;
   }
 }

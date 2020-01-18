@@ -1,19 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from 'components/layout'
+import SectionHeader from 'components/section-header'
 import SEO from 'components/seo'
 import styles from 'styles/faq.module.scss'
 
 const FAQ = () => (
   <Layout>
-    {/** To Do: Improve SEO */}
+    {/** TODO: Improve SEO */}
     <SEO title="FAQ" />
     <div className={styles.faq}>
       <div className={styles.faqSection}>
-        <div className={styles.sectionHeader}>
-          FAQ
-          <div className={styles.sectionLine} />
-        </div>
+        <SectionHeader text={'faq'} />
         <div className={styles.question}>
           What does a haircut service entail?
         </div>
