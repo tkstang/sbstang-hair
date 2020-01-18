@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+.section-header {
+  font-size: 20px;
+  line-height: 39px;
+  letter-spacing: 1px;
+  font-family: titling-gothic-fb, sans-serif;
+  font-weight: 300;
+  width: fit-content;
+  margin: 0 auto 40px;
+
+  &.left {
+    margin: 0 0 40px;
+  }
+
+  &.right {
+    margin: 0 0 40px auto;
+  }
+
+  .header-line {
+    position: relative;
+    background-color: $light-blush;
+    opacity: 0.7;
+    height: 16px;
+  }
+
+  .text {
+    position: relative;
+    margin: 0 12px -19px;
+    z-index: 100;
+  }
+
+  @include lg {
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: 2px;
+
+    &.leftlg {
+      margin: 0 0 40px;
+    }
+
+    &.rightlg {
+      margin: 0 0 40px auto;
+    }
+
+    .header-line {
+      height: 22px;
+    }
+
+    .text {
+      margin: 0 12px -17px;
+    }
+  }
+}
