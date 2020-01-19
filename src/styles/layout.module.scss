@@ -9,16 +9,18 @@
 
 .logo {
   position: absolute;
-  top: 20px;
   left: 20px;
-  color: $primary;
+  color: $charcoal;
   z-index: 1000;
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 32px;
-  font-weight: 600;
   letter-spacing: 3px;
   transition: opacity .35s, visibility .35s;
+  display: flex;
+  align-items: center;
+
+  &.image {
+    color: $primary;
+  }
 
   &.show {
     opacity: 1;
@@ -30,32 +32,42 @@
     visibility: hidden;
   }
 
-  @include lg {
-    font-size: 24px;
-    line-height: 32px;
+  .monogram {
+    font-family: bennet-banner, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 68px;
+    line-height: 110px;
+    margin-right: 2px;
+    margin-left: 6px;
+    z-index: 1001;
   }
 
   .logo-text {
     position: relative;
     z-index: 1001;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
   }
 
-  .logo-line {
-    position: relative;
-    height: 1px;
-    width: 80%;
-    border: 12px solid $black;
-    margin: -20px 0 0 -8px;
-    z-index: 1000;
+  @include lg {
+    .monogram {
+      font-size: 100px;
+      line-height: 136px;
+      margin-right: 4px;
+    }
 
-    &:nth-of-type(2) {
-      width: calc(100% + 30px);
+    .logo-text {
+      font-size: 18px;
+      letter-spacing: 2px;
+      line-height: 24px;
     }
   }
-
 }
 
-// To Do: Hide nav button when scrolling
+// TODO: Hide nav button when scrolling
 .nav-button-circle {
   position: fixed;
   top:  16px;

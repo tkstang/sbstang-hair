@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Location } from '@reach/router'
 import Media from 'react-media'
-
 import Navigation from 'components/navigation'
 import Footer from 'components/footer'
 import styles from 'styles/layout.module.scss'
@@ -17,18 +16,24 @@ const Layout = ({ children, stickyFooter }) => {
     setMounted(true);
   }, []);
 
-  const getLogoClass = () => !mobile ? '' : navActive ? styles.hide : styles.show;
+  const getMobileClass = () => !mobile ? '' : navActive ? styles.hide : styles.show;
+  const getLogoClass = (pathname) => pathname === '/' || pathname === '/about' ? styles.image : '';
 
   return (
     <div className={styles.layoutContainer}>
-      <Link to="/">
-        <div className={`${styles.logo} ${getLogoClass()}`}>
-          <div className={styles.logoText}>Samantha</div>
-          <div className={styles.logoLine} />
-          <div className={styles.logoText}>Stang</div>
-          <div className={styles.logoLine} />
-        </div>
-      </Link>
+      <Location>
+        {({ location }) => (
+          <Link to="/">
+            <div className={`${styles.logo} ${getMobileClass()} ${getLogoClass(location.pathname)}`}>
+              <div className={styles.monogram}>S</div>
+              <div className={styles.logoTextContainer}>
+                <div className={styles.logoText}>Samantha</div>
+                <div className={styles.logoText}>Stang</div>
+              </div>
+            </div>
+          </Link>
+        )}
+      </Location>
       <div className={styles.navContainer}>
         <Media query="(max-width: 991px)">
           {(matches) => {
