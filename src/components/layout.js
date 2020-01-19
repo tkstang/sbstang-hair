@@ -17,7 +17,7 @@ const Layout = ({ children, stickyFooter }) => {
   }, []);
 
   const getMobileClass = () => !mobile ? '' : navActive ? styles.hide : styles.show;
-  const getLogoClass = (pathname) => pathname === '/' || pathname === '/about' ? styles.image : '';
+  const getLogoClass = (pathname) => pathname === '/' || pathname.includes('/about') ? styles.image : '';
 
   return (
     <div className={styles.layoutContainer}>
