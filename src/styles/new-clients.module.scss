@@ -2,22 +2,17 @@
 @import "mixins";
 
 .new-clients {
-  .section-header {
-    @include section-header;
-
-    .section-line {
-      margin-bottom: 30px;
-    }
-  }
   max-width: 80%;
   text-align: center;
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   margin: 140px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  color: $charcoal;
+  letter-spacing: 1px;
 
   a:link, a:visited {
     color: $primary-10;
@@ -27,21 +22,26 @@
 
   .booking-section {
     max-width: 600px;
-    font-size: 14px;
-    font-weight: 400;
   }
 
   .appointment-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 14px;
-    font-weight: 300;
     padding-top: 40px;
 
     .appointment-step {
       flex: 1 0 100%;
       margin-bottom: 40px;
+
+      .section-header {
+        font-size: 16px;
+        line-height: 39px;
+        letter-spacing: 1px;
+        font-family: titling-gothic-fb, sans-serif;
+        color: $charcoal;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -50,8 +50,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    font-size: 14px;
-    font-weight: 300;
     max-width: 1000px;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -65,8 +63,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
     margin-top: 40px;
     max-width: 700px;
 
@@ -87,17 +86,6 @@
   @include md {
     max-width: 70%;
 
-    .booking-section {
-      font-size: 16px;
-    }
-
-    .appointment-section {
-      font-size: 15px;
-    }
-
-    .aftercare-section {
-      font-size: 15px;
-    }
   }
 
   @include lg {
@@ -110,15 +98,9 @@
       .appointment-step {
         flex: 1 0 33.33%;
         padding: 0 20px;
-      }
-    }
 
-    .policy-section {
-      font-size: 14px;
-
-      .policy {
-        .policy-header {
-          font-size: 15px;
+        .section-header {
+          font-size: 24px;
         }
       }
     }

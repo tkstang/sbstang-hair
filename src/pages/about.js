@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from "components/layout"
 import Hero from "components/hero"
 import SEO from "components/seo"
+import SectionHeader from "components/section-header"
 import styles from "styles/about.module.scss"
 
 const About = ({ data }) => (
@@ -17,10 +18,7 @@ const About = ({ data }) => (
       />
       <div className={styles.contentContainer}>
         <div className={styles.introSection}>
-          <div className={styles.sectionHeader}>
-            About Me
-            <div className={styles.sectionLine} />
-          </div>
+          <SectionHeader text={'about me'} />
           <p>
             My love of hair and beauty was ignited at the young age of 16 when I began working in a Salon near my childhood home in the Bay Area. My curiosity in the industry continued to grow throughout my time in college where I worked at upscale salons near school. Upon graduation, I decided to follow my passion and get my  cosmetology license.
           </p>
@@ -33,10 +31,7 @@ const About = ({ data }) => (
         </div>
         <div className={styles.achievementsSection}>
           <div className={styles.educationSection}>
-            <div className={styles.sectionHeader}>
-              Education / Honors
-              <div className={styles.sectionLine} />
-            </div>
+            <SectionHeader text={'education / honors'} alignment={'leftlg'} />
             <ul>
               <li>Wella Master Color Expert</li>
               <li>Hairdreams Extension Certified</li>
@@ -49,10 +44,7 @@ const About = ({ data }) => (
             </ul>
           </div>
           <div className={styles.showsSection}>
-          <div className={styles.sectionHeader}>
-              Shows
-              <div className={styles.sectionLine} />
-            </div>
+            <SectionHeader text={'shows'} alignment={'rightlg'} />
             <ul>
               <li>Assisted 2018 Jeremy Scott for Moschino show LA: Key hair Oribe Canales</li>
               <li>

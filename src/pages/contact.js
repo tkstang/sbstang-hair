@@ -1,18 +1,16 @@
 import React from "react"
 import { FaInstagram, FaFacebookF, FaEnvelope, FaPhone, FaCut } from "react-icons/fa"
 import Layout from "components/layout"
+import SectionHeader from 'components/section-header'
 import SEO from "components/seo"
 import styles from "styles/contact.module.scss"
 
 const Contact = () => (
   <Layout>
-    {/** To Do: Improve SEO */}
+    {/** TODO: Improve SEO */}
     <SEO title="Contact" />
     <div className={styles.contactSection}>
-      <div className={styles.sectionHeader}>
-        Get In Touch
-        <div className={styles.sectionLine} />
-      </div>
+      <SectionHeader text={'get in touch'} />
       <div className={styles.contactContainer}>
         <div className={styles.contactItem}>
           <div className={styles.contactLink}>

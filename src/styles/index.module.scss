@@ -1,12 +1,12 @@
 @import "variables";
 @import "mixins";
 
-.content-container {
-  @include content-container;
+body {
+  background-color: $off-white;
 }
 
-.section-header {
-  @include section-header;
+.content-container {
+  @include content-container;
 }
 
 .booking-section {
@@ -14,6 +14,8 @@
   font-size: 18px;
   font-weight: 300;
   width: 800px;
+  line-height: 24px;
+  letter-spacing: 1px;
   max-width: 80%;
   margin: 120px 0;
 
@@ -126,6 +128,7 @@
 
 @include lg {
   .booking-section {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 28px;
   }
 }
