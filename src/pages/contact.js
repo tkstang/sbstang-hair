@@ -1,5 +1,6 @@
 import React from "react"
-import { FaInstagram, FaFacebookF, FaEnvelope, FaPhone, FaCut } from "react-icons/fa"
+import { FaInstagram, FaFacebookF, FaEnvelope, FaPhone } from "react-icons/fa"
+import { GiScissors } from 'react-icons/gi'
 import Layout from "components/layout"
 import SectionHeader from 'components/section-header'
 import SEO from "components/seo"
@@ -38,7 +39,7 @@ const Contact = () => (
         <div className={styles.contactItem}>
           <div className={styles.contactLink}>
             <a href="https://maps.google.com/?q=Umbrella Salon, 2 N Market St #100, San Jose, CA 95113" target="_blank" rel="noopener noreferrer">
-                <FaCut className={styles.icon} />
+                <GiScissors className={styles.icon} />
                 <span>2 N Market St #100</span>
                 <span>San Jose, CA 95113</span>
             </a>
