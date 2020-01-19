@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-// To Do: Combine shared styling
+// TODO: Combine shared styling
 
 @include md-down {
   .navigation {
@@ -92,97 +92,34 @@
     flex-direction: column;
 
     .socials-container {
-      padding: 20px 40px 30px 0;
+      padding: 20px 40px 0 0;
     }
 
     .links-container {
+      position: absolute;
+      top: 82px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      flex-direction: row;
+      justify-content: flex-start;
+      transform-origin: 0% 0%;
+      // Translate y is the widdth of the social container
+      transform: rotate(90deg) translateY(-106px);
 
       .link-item {
-        flex: 1 0 100px;
+        flex: 1 0 auto;
+        display: flex;
+        padding-right: 30px;
+        padding-top: 36px;
 
-        .underline {
-          position: absolute;
-          right: 80px;
-          top: 51px;
-          transform: rotate(90deg) translateY(-70px);
-          height: 3px;
-          background-color: $primary;
-          width: 108px;
-          border: 1px solid $primary;
+        .link-container {
+          flex: 1 0 auto;
+          padding-bottom: 3px;
+          padding-left: 2px;
+          padding-right: 2px;
         }
-
-        &:first-child {
-          flex-basis: 124px;
-        }
-
-        &.new-clients {
-          position: relative;
-          .underline {
-            position: absolute;
-            right: 80px;
-            top: 51px;
-            transform: rotate(90deg) translateY(-70px);
-            height: 3px;
-            background-color: $primary;
-            width: 108px;
-            border: 1px solid $primary;
-          }
-        }
-
-        &.services {
-          position: relative;
-          .underline {
-            top: 35px;
-            width: 80px;
-            right: 94px;
-          }
-        }
-
-        &.gallery {
-          position: relative;
-          .underline {
-            top: 33px;
-            width: 78px;
-            right: 95px;
-          }
-        }
-
-        &.about {
-          position: relative;
-          .underline {
-            top: 25px;
-            width: 64px;
-            right: 102px;
-          }
-        }
-
-        &.contact {
-          position: relative;
-          .underline {
-            top: 36px;
-            width: 82px;
-            right: 92px;
-          }
-        }
-
-        &.faq {
-          position: relative;
-          .underline {
-            top: 14px;
-            width: 40px;
-            right: 113px;
-          }
-        }
-
       }
 
       .link {
-        float: left;
-        transform: rotate(90deg) translateY(-70px);
-        transform-origin: left top 0;
         color: $charcoal;
         font-size: 16px;
         font-weight: 500;
@@ -197,6 +134,10 @@
 
         &.active {
           color: $primary;
+
+          .link-container {
+            border-bottom: 3px solid $primary;
+          }
         }
 
         a {
