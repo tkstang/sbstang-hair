@@ -8,7 +8,7 @@ import styles from 'styles/gallery.module.scss'
 
 const Gallery = ({ data }) => {
   const instaPosts = data.allInstagramContent.edges.map(i => i.node);
-  // To Do: Add more interactivity with posts? show comments, tags, etc?
+  // TODO: Add more interactivity with posts? show comments, tags, etc?
 
   const [mobile, setMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -25,7 +25,7 @@ const Gallery = ({ data }) => {
           return null;
         }}
       </Media>
-      {/** To Do: Improve SEO */}
+      {/** TODO: Improve SEO */}
       <SEO title="Gallery" />
       <div className={styles.gallerySection}>
         <div className={styles.outerContainer}>
