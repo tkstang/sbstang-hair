@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Home" keywords={[]} />
       <Hero buttonText={'New Clients'}
           buttonLink={'/new-clients'}
           text={'Great hair doesn\'t happen by chance.  It happens by appointment.'}
@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
             {
               instaPosts.slice(0,8).map((post, i) => {
                 return (
-                  post.localImage ? <Image className={styles.instaImage} fluid={post.localImage.childImageSharp.fluid} key={i} />  : <div></div>
+                  post.localImage ? <Image className={styles.instaImage} fluid={post.localImage.childImageSharp.fluid} key={i} alt={post.user.username} />  : <div></div>
                 )
               })
             }
@@ -64,9 +64,13 @@ export const query = graphql`
           caption {
             text
           }
+          user {
+            username
+          }
           localImage{
             childImageSharp {
               fluid(maxHeight: 500, maxWidth: 500 quality: 90) {
+                originalName,
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

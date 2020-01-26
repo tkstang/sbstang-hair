@@ -41,7 +41,7 @@ const ImageCarousel = () => {
               const { fluid, fluid: { originalName } } = image.node.childImageSharp;
               return (
                 <div className={styles.heroImageContainer} key={`image${i}`}>
-                  <Img className={styles.image} fluid={fluid} alt={originalName}/>
+                  <Img className={styles.image} fluid={fluid} alt={'Hair by Samantha Stang'}/>
                 </div>
               )
             })

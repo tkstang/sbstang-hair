@@ -6,7 +6,7 @@ import styles from 'styles/hero.module.scss'
 import Button from 'components/button'
 import ImageCarousel from 'components/image-carousel'
 
-const Hero = ({ text, contentSize, buttonText, buttonLink, image }) => {
+const Hero = ({ text, contentSize, buttonText, buttonLink, image, altText }) => {
   return (
     <div className={styles.heroContainer}>
       {image && (
@@ -14,7 +14,7 @@ const Hero = ({ text, contentSize, buttonText, buttonLink, image }) => {
           <Image
             className={styles.heroImage}
             fluid={image.childImageSharp.fluid}
-            alt={'hero-image'}
+            alt={altText ? altText : 'Hair by Samantha Stang'}
           />
         </div>
       )}
@@ -35,19 +35,23 @@ const Hero = ({ text, contentSize, buttonText, buttonLink, image }) => {
 
 Hero.propTypes = {
   text: PropTypes.string,
+  contentSize: PropTypes.string,
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
   image: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.bool
   ]),
+  altText: PropTypes.string
 }
 
 Hero.defaultProps = {
   text: '',
+  contentSize: null,
   buttonText: '',
   buttonLink: '',
   image: false,
+  altText: null
 }
 
 export default Hero

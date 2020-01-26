@@ -34,7 +34,7 @@ const Gallery = ({ data }) => {
               instaPosts.map((post, i) => {
                 return (
                   post.localImage ?
-                    <Image className={styles.instaImage} key={i} fluid={post.localImage.childImageSharp.fluid}/>
+                    <Image className={styles.instaImage} alt={post.user.username} key={i} fluid={post.localImage.childImageSharp.fluid}/>
                     : null
                 )
               })
@@ -55,6 +55,9 @@ export const query = graphql`
           link
           caption {
             text
+          }
+          user {
+            username
           }
           localImage{
             childImageSharp {
