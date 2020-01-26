@@ -1,12 +1,22 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = `https://www.sbstanghair.com`,
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: `Samantha Stang · Hair Stylist`,
     description: `Stylist and Color Expert at Umbrella Salon in San Jose, California. Book now for your next cut, color or styling appointment.`,
-    url: `https://www.sbstanghair.com`,
+    siteUrl,
     image: `/images/seo-image.jpg`,
     instagramUsername: `sbstanghair`
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,6 +58,27 @@ module.exports = {
         access_token: "11857677.1677ed0.2a1c808a3ec3471dbfabe78d864da2e8"
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    }
     // {
     //   resolve: `gatsby-source-instagram`,
     //   options: {

@@ -8,9 +8,10 @@ import styles from "styles/about.module.scss"
 
 const About = ({ data }) => (
   <Layout>
-    {/** To Do: Improve SEO */}
+    {/** TODO: Improve SEO */}
     <SEO title="About" />
     <div className={styles.aboutSection}>
+      {/** TODO: Add alt text once picture of Samantha is added */}
       <Hero image={data.imageOne} buttonText={'Get In Touch'}
         buttonLink={'mailto:sbstanghair@gmail.com?subject=Inquiry from sbstanghair.com'}
         text={`Hairdressers are a wonderful breed.  You work one-on-one with another human being and the object is to make them feel so much better and to look at themselves with a  twinkle in their eye. - Vidal Sassoon`}

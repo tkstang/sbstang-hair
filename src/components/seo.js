@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
@@ -18,7 +11,7 @@ function SEO({ title, description, image, pathname, meta, keywords, lang }) {
           siteMetadata {
             defaultTitle: title
             defaultDescription: description
-            siteUrl: url
+            siteUrl
             defaultImage: image
             instagramUsername
           }
@@ -34,6 +27,7 @@ function SEO({ title, description, image, pathname, meta, keywords, lang }) {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname || "/"}`,
   }
+  const allKeywords = ['hairstylist', 'hair stylist', 'hairdresser', 'colorist', 'hair cut', 'haircut', 'hair color', 'hair salon', 'san jose hair', 'san jose hair salon', 'san jose hair color', 'san jose hair cut', 'updo', 'sbstanghair', 'samantha stang', 'umbrella salon', ...keywords]
 
   return (
     <Helmet
@@ -82,14 +76,10 @@ function SEO({ title, description, image, pathname, meta, keywords, lang }) {
         },
         // TODO: Add instagram and facebook info
       ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
+        .concat({
+          name: `keywords`,
+          content: allKeywords.join(`, `),
+        })
         .concat(meta)}
     />
   )
@@ -107,6 +97,8 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  pathname: PropTypes.string
 }
 
 export default SEO

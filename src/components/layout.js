@@ -43,7 +43,7 @@ const Layout = ({ children, stickyFooter }) => {
 
                 return (
                   <div className={`${styles.navButtonCircle} ${navActive ? styles.active : ''}`}
-                  onClick={() => toggleNavState(!navActive)}>
+                    role='button' tabIndex={0} onClick={() => toggleNavState(!navActive)} onKeyDown={() => toggleNavState(!navActive)}>
                   <div className={`${styles.navButton} ${navActive ? styles.active : ''}`}>
                   <span className={styles.top} />
                   <span className={styles.middle} />
