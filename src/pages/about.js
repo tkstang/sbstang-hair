@@ -81,7 +81,7 @@ export default About
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "oct-shoot2-5.jpg" }) {
+    imageOne: file(relativePath: { eq: "oct-shoot2-5-opt.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 800) {
           ...GatsbyImageSharpFluid
