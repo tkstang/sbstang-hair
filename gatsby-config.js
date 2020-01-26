@@ -7,6 +7,7 @@ module.exports = {
     instagramUsername: `sbstanghair`
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
