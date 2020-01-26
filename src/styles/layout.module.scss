@@ -82,6 +82,10 @@
   transition: opacity .25s ease;
   background-color: $off-white;
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover {
     opacity: 1;
 
