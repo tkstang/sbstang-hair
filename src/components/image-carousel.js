@@ -38,7 +38,7 @@ const ImageCarousel = () => {
         <Carousel className={styles.imageCarousel} showArrows={false} showThumbs={false} interval={8000} transitionTime={2000} showStatus={false} autoPlay={true} infiniteLoop>
           {
             data.allFile.edges.map((image, i) => {
-              const { fluid, fluid: { originalName } } = image.node.childImageSharp;
+              const { fluid } = image.node.childImageSharp;
               return (
                 <div className={styles.heroImageContainer} key={`image${i}`}>
                   <Img className={styles.image} fluid={fluid} alt={'Hair by Samantha Stang'}/>

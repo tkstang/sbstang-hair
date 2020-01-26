@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'gatsby-image'
 import { graphql } from 'gatsby'
-import Media from 'react-media'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
 import styles from 'styles/gallery.module.scss'
@@ -10,21 +9,8 @@ const Gallery = ({ data }) => {
   const instaPosts = data.allInstagramContent.edges.map(i => i.node);
   // TODO: Add more interactivity with posts? show comments, tags, etc?
 
-  const [mobile, setMobile] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <Layout>
-      <Media query="(max-width: 575px)">
-        {(matches) => {
-          setMobile(matches && mounted);
-          return null;
-        }}
-      </Media>
       {/** TODO: Improve SEO */}
       <SEO title="Gallery" />
       <div className={styles.gallerySection}>
