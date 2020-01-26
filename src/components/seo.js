@@ -11,7 +11,7 @@ function SEO({ title, description, image, pathname, meta, keywords, lang }) {
           siteMetadata {
             defaultTitle: title
             defaultDescription: description
-            siteUrl: url
+            siteUrl
             defaultImage: image
             instagramUsername
           }
@@ -97,6 +97,8 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  pathname: PropTypes.string
 }
 
 export default SEO
