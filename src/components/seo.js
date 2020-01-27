@@ -27,7 +27,7 @@ function SEO({ title, description, image, pathname, meta, keywords, lang }) {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname || "/"}`,
   }
-  const allKeywords = ['hairstylist', 'hair stylist', 'hairdresser', 'colorist', 'hair cut', 'haircut', 'hair color', 'hair salon', 'san jose hair', 'san jose hair salon', 'san jose hair color', 'san jose hair cut', 'updo', 'sbstanghair', 'samantha stang', 'umbrella salon', ...keywords]
+  const allKeywords = ['hairstylist', 'hair stylist', 'hairdresser', 'colorist', 'hair cut', 'haircut', 'hair color', 'hair salon', 'san jose hair', 'san jose hair salon', 'san jose hair color', 'san jose hair cut', 'san jose salon', 'updo', 'sbstanghair', 'samantha stang', 'umbrella salon', 'umbrella', 'umbrella san jose', 'umbrella hair', ...keywords]
 
   return (
     <Helmet
